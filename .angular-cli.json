@@ -21,12 +21,9 @@
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.css",
         "../node_modules/typeface-league-spartan/index.css",
-        "../node_modules/typeface-clear-sans/index.css",
-        "../node_modules/typeface-libre-baskerville/index.css",
-        "../node_modules/typeface-montserrat/index.css",
-        "../node_modules/typeface-exo-2/index.css",
         "../node_modules/font-awesome/css/font-awesome.css",
         "../node_modules/css-modal/build/modal.css",
+        "../src/assets/exo2.css",
         "styles.css"
       ],
       "scripts": [
