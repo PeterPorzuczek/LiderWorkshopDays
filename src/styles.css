@@ -66,7 +66,7 @@ h5 {
 h6 {
   /*font-family: 'Montserrat';*/
   font-family: 'Montserrat';
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.1em;
   margin:18px;
   text-align: center;
@@ -495,7 +495,7 @@ padding-top: 10px;
 color: white;
 background-color: #0BA2E4;
 
-border-bottom: 8px dashed #017EB8;
+border-bottom: 8px dashed #0D497F;
 
 
 position:relative;
@@ -505,7 +505,7 @@ height: 200px;
 
 .scheduleWorkshopRedS {
 color: white;
-background-color: #017EB8;
+background-color: #0D497F;
 
 border-bottom: 8px dashed #0BA2E4;
 
@@ -517,11 +517,11 @@ height: 200px;
 
 .scheduleWorkshopBlue {
 color: white;
-background-color: #C33445;
+background-color: #8B1E38;
 
 border-bottom: 8px dashed #E74657;
 
-border-right: 8px dashed #017EB8;
+border-right: 8px dashed #0D497F;
 position:relative;
 width:100%;
 height: 200px;
@@ -531,7 +531,7 @@ height: 200px;
 color: white;
 background-color: #E74657;
 
-border-bottom: 8px dashed #C33445;
+border-bottom: 8px dashed #8B1E38;
 
 border-right: 8px dashed #0BA2E4;
 position:relative;
@@ -543,7 +543,7 @@ height: 200px;
 color: white;
 background-color: #0BA2E4;
 
-border-bottom: 8px dashed #017EB8;
+border-bottom: 8px dashed #0D497F;
 
 
 position:relative;
@@ -553,7 +553,7 @@ height: 55px;
 
 .scheduleSubHeadRedS {
 color: white;
-background-color: #017EB8;
+background-color: #0D497F;
 
 border-bottom: 8px dashed #0BA2E4;
 
@@ -568,7 +568,7 @@ height: 55px;
   color: white;
   background-color: #0BA2E4;
   
-  border-bottom: 8px dashed #017EB8;
+  border-bottom: 8px dashed #0D497F;
   
   
   position:relative;
@@ -578,7 +578,7 @@ height: 55px;
   
   .scheduleSubHeadRedSF {
   color: white;
-  background-color: #017EB8;
+  background-color: #0D497F;
   
   border-bottom: 8px dashed #0BA2E4;
   
@@ -591,10 +591,10 @@ height: 55px;
 
 .scheduleSubHeadBlue {
 color: white;
-background-color: #C33445;
+background-color: #8B1E38;
 
 border-bottom: 8px dashed #E74657;
-border-right: 8px dashed #017EB8;
+border-right: 8px dashed #0D497F;
 
 position:relative;
 width:100%;
@@ -605,7 +605,7 @@ height: 55px;
 color: white;
 background-color: #E74657;
 
-border-bottom: 8px dashed #C33445;
+border-bottom: 8px dashed #8B1E38;
 border-right: 8px dashed #0BA2E4;
 
 position:relative;
@@ -615,10 +615,10 @@ height: 115px;
 
 .scheduleSubHeadBlueF {
   color: white;
-  background-color: #C33445;
+  background-color: #8B1E38;
   
   border-bottom: 8px dashed #E74657;
-  border-right: 8px dashed #017EB8;
+  border-right: 8px dashed #0D497F;
   
   position:relative;
   width:100%;
@@ -629,7 +629,7 @@ height: 115px;
   color: white;
   background-color: #E74657;
   
-  border-bottom: 8px dashed #C33445;
+  border-bottom: 8px dashed #8B1E38;
   border-right: 8px dashed #0BA2E4;
   
   position:relative;
@@ -688,7 +688,7 @@ align-items: center;
   color: white;
   background-color: #0BA2E4;
   
-  border-bottom: 8px dashed #017EB8;
+  border-bottom: 8px dashed #0D497F;
   
   
   position:relative;
@@ -697,10 +697,10 @@ align-items: center;
   }
   .scheduleSubHeadBlueF {
     color: white;
-    background-color: #C33445;
+    background-color: #8B1E38;
     
     border-bottom: 8px dashed #E74657;
-    border-right: 0px dashed #017EB8;
+    border-right: 0px dashed #0D497F;
     
     position:relative;
     width:100%;
@@ -711,7 +711,7 @@ align-items: center;
       color: white;
       background-color: #E74657;
       
-      border-bottom: 8px dashed #C33445;
+      border-bottom: 8px dashed #8B1E38;
       border-right: 0px dashed #0BA2E4;
       
       position:relative;
@@ -735,7 +735,7 @@ height: 200px;
 color: white;
 
 
-border-bottom: 8px dashed #C33445;
+border-bottom: 8px dashed #8B1E38;
 
 border-right: 0px dashed #0BA2E4;
 position:relative;
@@ -759,7 +759,7 @@ height: 55px;
 color: white;
 
 
-border-bottom: 8px dashed #C33445;
+border-bottom: 8px dashed #8B1E38;
 border-right: 0px dashed #0BA2E4;
 
 position:relative;
@@ -923,7 +923,7 @@ agm-map {
 }
 
 .modal-content{
-font-size: 20px !important;
+font-size: 1.2em !important;
 border: 8px solid #E74657 !important;
 text-align: justify !important;
 }
@@ -934,7 +934,7 @@ text-align: justify !important;
  font: "Montserrat";
  font-weight: 400;
  color: white;
- font-size: 25px !important;
+ font-size: 1.4em !important;
  /*display: none !important;*/
  padding:15px !important;
 }
@@ -966,3 +966,23 @@ display: none !important;
 .notActive{
 opacity:30%;
 }
+
+@media only screen and (max-width: 759px) {
+  .modal-content{
+    font-size: 0.9em !important;
+    border: 8px solid #E74657 !important;
+    text-align: justify !important;
+    }
+    
+    #modal-label {
+     height:auto;
+     background-color:  #E74657;
+     font: "Montserrat";
+     font-weight: 400;
+     color: white;
+     font-size: 1em !important;
+     /*display: none !important;*/
+     padding:15px !important;
+    }
+}
+  
