@@ -24,7 +24,7 @@ export class AppComponent implements AfterViewInit {
       renderer: 'svg',
       loop: 30,
       autoplay: true,
-      path: '../assets/logoAnim.json'
+      path: './assets/logoAnim.json'
     };
 
     this.anim = bodymovin.loadAnimation(this.animData);
