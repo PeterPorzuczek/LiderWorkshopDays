@@ -23,7 +23,7 @@
         "../node_modules/typeface-league-spartan/index.css",
         "../node_modules/font-awesome/css/font-awesome.css",
         "../node_modules/css-modal/build/modal.css",
-        "../src/assets/exo2.css",
+        "../src/assets/montserrat.css",
         "styles.css"
       ],
       "scripts": [

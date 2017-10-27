@@ -1,39 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 body, html {
-  font-family: 'Exo 2';
+  font-family: 'Montserrat';
   background-color: #1F2436;
 }
 header {
   border-bottom: 0px !important;
 }
 h1 {
-/*font-family: 'Exo 2';*/
+/*font-family: 'Montserrat';*/
 font-family: 'League Spartan';
 font-weight: 700;
 }
 h2 {
-/*font-family: 'Exo 2';*/
-font-family: 'Exo 2';
+/*font-family: 'Montserrat';*/
+font-family: 'Montserrat';
 font-weight: 300;
 }
 h3 {
-/*font-family: 'Exo 2';*/
+/*font-family: 'Montserrat';*/
 font-family: 'League Spartan';
 font-weight: 700;
 font-size: 2.1em;
 margin:7px;
 }
 h4 {
-/*font-family: 'Exo 2';*/
+/*font-family: 'Montserrat';*/
 font-family: 'League Spartan';
 font-weight: 700;
 font-size: 1.8em;
 margin:7px;
 }
 h5 {
-/*font-family: 'Exo 2';*/
-font-family: 'Exo 2' !important;
-font-weight: 700 !important;
+/*font-family: 'Montserrat';*/
+font-family: 'Montserrat' !important;
+font-weight: 600 !important;
 font-size: 1.7em;
 padding-top:5px !important;
 margin-top:0px !important;
@@ -45,10 +45,10 @@ text-align: center !important;
 
 }
 h6 {
-/*font-family: 'Exo 2';*/
-font-family: 'Exo 2';
-font-weight: 400;
-font-size: 1.5em;
+/*font-family: 'Montserrat';*/
+font-family: 'Montserrat';
+font-weight: 200;
+font-size: 1.4em;
 margin:14px;
 text-align: center;
 
@@ -56,34 +56,34 @@ text-align: center;
 
 @media only screen and (min-width: 790px) and (max-width: 1400px)  {
 h5 {
-  /*font-family: 'Exo 2';*/
-  font-family: 'Exo 2';
+  /*font-family: 'Montserrat';*/
+  font-family: 'Montserrat';
   font-weight: 600;
   font-size: 1.4em;
   margin:18px;
   text-align: center;
 }
 h6 {
-  /*font-family: 'Exo 2';*/
-  font-family: 'Exo 2';
+  /*font-family: 'Montserrat';*/
+  font-family: 'Montserrat';
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin:18px;
   text-align: center;
 }
 }
 @media only screen and (min-width: 750px) and (max-width: 790px)  {
 h5 {
-  /*font-family: 'Exo 2';*/
-  font-family: 'Exo 2';
+  /*font-family: 'Montserrat';*/
+  font-family: 'Montserrat';
   font-weight: 600;
   font-size: 1.2em;
   margin:18px;
   text-align: justify;
 }
 h6 {
-  /*font-family: 'Exo 2';*/
-  font-family: 'Exo 2';
+  /*font-family: 'Montserrat';*/
+  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 0.89em;
   margin:14px;
@@ -92,16 +92,16 @@ h6 {
 }
 @media only screen and (min-width: 730px) and (max-width: 761px)  {
 h5 {
-  /*font-family: 'Exo 2';*/
-  font-family: 'Exo 2';
+  /*font-family: 'Montserrat';*/
+  font-family: 'Montserrat';
   font-weight: 600;
   font-size: 1.5em;
   margin:18px;
   text-align: justify;
 }
 h6 {
-  /*font-family: 'Exo 2';*/
-  font-family: 'Exo 2';
+  /*font-family: 'Montserrat';*/
+  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 1.3em;
   margin:18px;
@@ -110,16 +110,16 @@ h6 {
 }
 @media only screen and (min-width: 500px) and (max-width: 730px)  {
 h5 {
-  /*font-family: 'Exo 2';*/
-  font-family: 'Exo 2';
+  /*font-family: 'Montserrat';*/
+  font-family: 'Montserrat';
   font-weight: 600;
   font-size: 1.5em;
   margin:20px;
   text-align: justify;
 }
 h6 {
-  /*font-family: 'Exo 2';*/
-  font-family: 'Exo 2';
+  /*font-family: 'Montserrat';*/
+  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 1.3em;
   margin:18px;
@@ -128,16 +128,16 @@ h6 {
 }
 @media only screen and (max-width: 500px) {
 h5 {
-  /*font-family: 'Exo 2';*/
-  font-family: 'Exo 2';
+  /*font-family: 'Montserrat';*/
+  font-family: 'Montserrat';
   font-weight: 600;
   font-size: 1.2em;
   margin:18px;
   text-align: justify;
 }
 h6 {
-  /*font-family: 'Exo 2';*/
-  font-family: 'Exo 2';
+  /*font-family: 'Montserrat';*/
+  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 0.94em;
   margin:15px;
@@ -931,7 +931,7 @@ text-align: justify !important;
 #modal-label {
  height:auto;
  background-color:  #E74657;
- font: "Exo 2";
+ font: "Montserrat";
  font-weight: 400;
  color: white;
  font-size: 25px !important;
