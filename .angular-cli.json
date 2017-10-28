@@ -22,8 +22,8 @@
         "../node_modules/bootstrap/dist/css/bootstrap.css",
         "../node_modules/typeface-league-spartan/index.css",
         "../node_modules/font-awesome/css/font-awesome.css",
-        "../node_modules/css-modal/build/modal.css",
         "../src/assets/montserrat.css",
+        "../node_modules/css-modal/build/modal.css",
         "styles.css"
       ],
       "scripts": [

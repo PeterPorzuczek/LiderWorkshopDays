@@ -941,6 +941,7 @@ text-align: justify !important;
 
 .modal-inner {
 /*border-radius: 0px !important;*/
+
 background: transparent !important;
 box-shadow: 0 0 30px rgba(0, 0, 0, 0.3) !important;
 
@@ -954,7 +955,12 @@ transition: max-width 0.25s linear,
 background: transparent !important;
 box-shadow: none !important;
 background-color: transparent !important;
+color: #1F2436 !important;
 }
+
+.modal-close::after {
+  color: #1F2436 !important;
+  }
 
 .modal-footer {
 border-top: 0px solid !important;
@@ -968,6 +974,12 @@ opacity:30%;
 }
 
 @media only screen and (max-width: 759px) {
+  .head {
+    border-left: 0px;
+    border-right: 0px;
+
+    }
+
   .modal-content{
     font-size: 0.9em !important;
     border: 8px solid #E74657 !important;
