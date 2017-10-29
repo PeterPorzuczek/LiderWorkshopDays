@@ -4,15 +4,15 @@
     <input type="checkbox" id="toggle-nav">
     <span class="brand"><img class="navLogo" src="assets/logoSite.svg" type="image/svg+xml"/></span>        
     <ul class="menu" role="menu">
-      <!-- <li><a href="#">LWD na UG</a></li> -->
+      <li><a href="#start">Start</a></li>
       <li><a href="#warsztaty">Warsztaty</a></li>
-      <!-- <li><a href="#">Trenerzy</a></li> 
-      <li><a href="#">Patroni</a></li>
-      <li><a href="#">Miejsce</a></li> -->
+      <li><a href="#trenerzy">Trenerzy</a></li> 
+      <li><a href="#patroni">Patroni</a></li>
+      <li><a href="#miejsce">Miejsce</a></li>
       <li ><a href="https://lwd2017.evenea.pl"class="special">Zapisz się już teraz</a></li>
     </ul>
   </nav>
-  <div class="container-fluid nopadding">
+  <div class="container-fluid nopadding" id="start">
     <div class="page-header nopadding">
       <div class="headerBackgroundWrapper">
         <div id="logoAnim" class="logoAnim"></div>
@@ -32,6 +32,28 @@
       <a id="evenea-btn" href="https://lwd2017.evenea.pl">ZAPISZ SIĘ<span style="color:white; margin-left: 7px" class="fa fa-pencil"></span></a>
     </div>
   </div>
+
+  <div class="info">
+    <div class="row">
+        <div class=" col-sm-6 col-md-6 col-lg-6 padding-horizontal padding-vertical-mob bottom-buffer">
+            <img class="col-centered top-buffer-2 bottom-buffer" src="assets/RIcon.svg" type="image/svg+xml"/>
+            <p>Dwudniowa seria bezpłatnych warsztatów przygotowanych przez praktyków z wielu prestiżowych firm zajmujących się innowacyjnymi rozwiązaniami w świecie IT 💻 oraz szeroko pojętego biznesu. 💰</p>
+        </div>
+        <div class=" col-sm-6 col-md-6 col-lg-6 padding-horizontal padding-vertical-mob bottom-buffer">
+            <img class="col-centered top-buffer-2 bottom-buffer" src="assets/LIcon.svg" type="image/svg+xml"/>
+            <p>Na warsztatach zdobędziesz niezbędną wiedzę 💡, a przede wszystkim praktyczne umiejętności w wybranej przez Ciebie tematyce. W tym roku przewidujemy jeszcze więcej atrakcji i jeszcze większą porcję nowinek z IT. Będzie się działo!</p>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="info-add">
+        <div class="row">
+            <div class="col-lg-12 padding-horizontal padding-vertical-mob">
+                <p>Wydarzenie dedykowane jest studentom kierunków o profilach informatycznych, inżynierom IT oraz wszystkim zainteresowanym programowaniem oraz analityką biznesową. Ponad 160 osób będzie miało okazję wziąć udział w prelekcjach autorytetów w dziedzinie IT na Wydziale Zarządzania Uniwersytetu Gdańskiego. Lider Workshop Days to doskonałe miejsce zarówno do nawiązania kontaktów ze znawcami i specjalistami nowych technologii, jak i wymiany wzajemnych doświadczeń.</p>
+            </div>
+        </div>
+    </div>
 
   <div class="head container-fluid">
     <div id="warsztaty" class="row-fluid">
@@ -75,7 +97,7 @@
                 </div>
                 <div class="more" style="border-color: #8B1E38">
                   <a href="#modal-sentione" class="nopadding" ><!--onclick="return false"-->
-                      <h6>Więcej</h6>
+                      <h6 class="hoover-scale-up">Więcej</h6>
                   </a>
                 </div>
         </div>
@@ -96,7 +118,7 @@
                             </div>
                             <div class="more" style="border-color: #E74657">
                               <a href="#modal-catta" class="nopadding">
-                                <h6>Więcej</h6>
+                                <h6 class="hoover-scale-up">Więcej</h6>
                               </a>
                             </div> 
 
@@ -121,7 +143,7 @@
                 </div>
                 <div class="more" style="border-color: #E74657">
                   <a href="#modal-asseco" class="nopadding">
-                    <h6>Więcej</h6>
+                    <h6 class="hoover-scale-up">Więcej</h6>
                   </a>
                 </div>
         </div>
@@ -141,7 +163,7 @@
                     </div>
                     <div class="more" style="border-color: #8B1E38">
                       <a href="#modal-aplitt" class="nopadding">
-                          <h6>Więcej</h6>
+                          <h6 class="hoover-scale-up">Więcej</h6>
                       </a>
                     </div>
         </div>
@@ -177,8 +199,8 @@
                         </div>
                       </div>
                       <div class="more" style="border-color: #0D497F">
-                        <a href="#modal-adam" class="nopadding">
-                          <h6>Więcej</h6>
+                        <a href="#modal-intel" class="nopadding">
+                          <h6 class="hoover-scale-up">Więcej</h6>
                         </a>
                       </div>
           </div>
@@ -199,7 +221,7 @@
                       </div>
                       <div class="more" style="border-color: #0BA2E4">
                         <a href="#modal-crt" class="nopadding">
-                          <h6>Więcej</h6>
+                          <h6 class="hoover-scale-up">Więcej</h6>
                         </a>
                       </div>
 
@@ -225,7 +247,7 @@
                         </div>
                         <div class="more" style="border-color: #0BA2E4">
                           <a href="#modal-yello1" class="nopadding">
-                            <h6>Więcej</h6>
+                            <h6 class="hoover-scale-up">Więcej</h6>
                           </a>
                         </div>
             </div>
@@ -244,7 +266,7 @@
                         </div>
                         <div class="more" style="border-color: #0D497F">
                           <a href="#modal-yello2" class="nopadding">
-                            <h6>Więcej</h6>
+                            <h6 class="hoover-scale-up">Więcej</h6>
                           </a>
                         </div>       
             </div>
@@ -252,33 +274,393 @@
     </div>
   </div>
 
-  <!-- <div class="head container-fluid">
+  <div class="head container-fluid">
     <div id="trenerzy" class="row-fluid">
       <h1>TRENERZY</h1>
     </div>
   </div>
 
-  <div class="head container-fluid">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="left col-sm-6 col-md-6 col-lg-6 side col-centered nopadding" >
+          <a href="#modal-rafal" class="nopadding">
+          <div class="left-div"> 
+              <div class="row padding-vertical">
+              <img src="assets/coachesInfo/RafalMiazgaImg.png" type="image/svg+xml" class="img-responsive"/>
+              </div>
+              <div class="row ">
+              <img src="assets/coachesInfo/RafalMiazgaDesc.svg" type="image/svg+xml" class="img-responsive"/>
+              </div>
+          </div>
+          </a>
+          <a href="#modal-kasia" class="nopadding">
+          <div  class="right-div"> 
+              <div class="row padding-vertical">
+              <img src="assets/coachesInfo/KatarzynaKantImg.png" type="image/svg+xml" class="img-responsive"/>
+              </div>
+              <div class="row ">
+              <img src="assets/coachesInfo/KatarzynaKantDesc.svg" type="image/svg+xml" class="img-responsive"/>
+              </div>
+          </div>
+          </a>
+      </div>
+      
+      <div class="right col-sm-6 col-md-6 col-lg-6 side col-centered nopadding">
+          <a href="#modal-beata" class="nopadding">
+          <div class="left-div"> 
+              <div class="row padding-vertical">
+              <img src="assets/coachesInfo/BeataButkiewiczImg.png" type="image/svg+xml" class="img-responsive"/>
+              </div>
+              <div class="row">
+              <img src="assets/coachesInfo/BeataButkiewiczDesc.svg" type="image/svg+xml" class="img-responsive"/>
+              </div>
+          </div>
+          </a>
+          <a href="#modal-karol" class="nopadding">
+          <div class="right-div"> 
+              <div class="row padding-vertical">
+              <img src="assets/coachesInfo/KarolGierszewskiImg.png" type="image/svg+xml" class="img-responsive"/>
+              </div>
+              <div class="row">
+              <img src="assets/coachesInfo/KarolGierszewskiDesc.svg" type="image/svg+xml" class="img-responsive"/>
+              </div>
+          </div>
+          </a>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="left col-sm-6 col-md-6 col-lg-6 side col-centered nopadding">
+            <a href="#modal-robert" class="nopadding">
+            <div class="left-div"> 
+                <div class="row padding-vertical">
+                <img src="assets/coachesInfo/RobertSzulistImg.png" type="image/svg+xml" class="img-responsive"/>
+                </div>
+                <div class="row">
+                <img src="assets/coachesInfo/RobertSzulistDesc.svg" type="image/svg+xml" class="img-responsive"/>
+                </div>
+            </div>
+            </a>
+            <a href="#modal-adam" class="nopadding">
+            <div class="right-div"> 
+                <div class="row padding-vertical">
+                <img src="assets/coachesInfo/AdamCetnerowskiImg.png" type="image/svg+xml" class="img-responsive"/>
+                </div>
+                <div class="row">
+                <img src="assets/coachesInfo/AdamCetnerowskiDesc.svg" type="image/svg+xml" class="img-responsive"/>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="right col-sm-6 col-md-6 col-lg-6 side col-centered nopadding">
+            <a href="#modal-michal" class="nopadding">
+            <div class="left-div"> 
+              <div class="row padding-vertical">
+                <img src="assets/coachesInfo/MichalMichalczukImg.png" type="image/svg+xml" class="img-responsive"/>
+                </div>
+                <div class="row">
+                <img src="assets/coachesInfo/MichalMichalczukDesc.svg" type="image/svg+xml" class="img-responsive"/>
+              </div>
+            </div>
+            </a>
+            <a href="#modal-mateusz" class="nopadding">
+            <div class="right-div"> 
+                <div class="row padding-vertical"> 
+                <img src="assets/coachesInfo/MateuszTurzynskiImg.png" type="image/svg+xml" class="img-responsive"/>
+              </div>
+              <div class="row">
+                <img src="assets/coachesInfo/MateuszTurzynskiDesc.svg" type="image/svg+xml" class="img-responsive"/>
+              </div>
+            </div>
+            </a>
+        </div>
+      </div>
+  </div>
+
+
+<div class="head container-fluid" id="patroni">
     <div id="patroni" class="row-fluid">
       <h1>PATRONI</h1>
     </div>
   </div>
 
-  <div class="head container-fluid">
+<div class="patrons">
+  <div class="container-fluid">
+      <div class="row text-center">
+          <div class="col-md-3 col-sm-4 col-xs-6">
+              <a  href="http://gdansk.pl/"><img src="assets/patrons/gdanskpl.svg" type="image/svg+xml" class="patron center-block img-responsive"/></a>
+              </div>
+              <div class="col-md-3 col-sm-4 col-xs-6">
+                  <a  href="https://radiogdansk.pl"><img src="assets/patrons/radiogdansk.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <a  href="http://gdansk.dlawas.info"><img src="assets/patrons/gdanskdlawas.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <a  href="https://goyello.com/pl/"><img src="assets/patrons/goyello.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <a  href="https://aplitt.pl/pl/"><img src="assets/patrons/aplitt.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
+             </div>
+             <div class="col-md-3 col-sm-4 col-xs-6">
+                <a  href="http://www.centrumtalentow.pl"><img src="assets/patrons/crt.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
+             </div>
+             <div class="col-md-3 col-sm-4 col-xs-6">
+                <a  href="https://pl.asseco.com"><img src="assets/patrons/asseco.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a  href="http://catta.pl"><img src="assets/patrons/catta.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
+              </div>
+              <div class="col-md-3 col-sm-4 col-xs-6">
+                  <a  href="https://sentione.com/pl"><img src="assets/patrons/sentione.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                  <a  href="http://gdynia.pl"><img src="assets/patrons/gdynia.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+    
+                 </div>
+                 <div class="col-md-3 col-sm-4 col-xs-6">
+      </div>
+
+      </div>
+  </div>
+</div>
+
+  <div class="head container-fluid" id="miejsce">
     <div id="miejsce" class="row-fluid">
       <h1>MIEJSCE</h1>
     </div>
-  </div> -->
-  <!--
-  <div class="info">
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]=18 >
-      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>            
-    </agm-map>
   </div>
--->
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="left col-sm-6 col-md-6 col-lg-6 side col-centered nopadding ">
+        <div class="place">
+          <h2>JAK NAJŁATWIEJ DOJECHAĆ?</h2>
+              <br>
+
+          <p><strong>Wydział Zarządzania, Centrum Dydaktyczno-Konferencyjne</strong>
+          <br>ul. Piaskowa 9, 81-864 Sopot </p>
+          <br>
+          <p>Przydatny może się okazać adres <strong><br><a href="http://trojmiasto.jakdojade.pl/">http://trojmiasto.jakdojade.pl/</a></strong></p>
+        </div>        
+      </div>
+      <div class="right col-sm-6 col-md-6 col-lg-6 side col-centered nopadding">
+          <agm-map [latitude]="lat" [longitude]="lng" [zoom]=18 >
+              <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>            
+            </agm-map>
+      </div>
+    </div>
+  </div>
+
+
 </main>
 
+<footer >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-centered top-buffer-2">
+        <a href="http://wzr.pl" target="_blank" title="Wydział Zarządzania Uniwersytetu Gdańskiego">Wydział Zarządzania Uniwersytetu Gdańskiego</a>
+        <br>
+        <a class="copyright" href="http://knilider.org" target="_blank" title="Koło Naukowe Informatyki L!der">2017 Koło Naukowe Informatyki <strong>L<span>!</span>der</strong></a>
+      </div>
+    </div>
+    <div class="row top-buffer">
+      <div class="col-lg-12 col-centered">
+        <a class="social"  href="https://www.youtube.com/channel/UClZQSCK7B51aB9kSTFimrIw" target="_blank"><i class="fa fa-3x fa-social fa-youtube text-inverse"></i></a>
+        <a class="social"  href="https://www.instagram.com/kni.lider/" target="_blank"><i class="fa fa-3x fa-social fa-instagram text-inverse"></i></a>      
+        <a class="social"  href="https://www.facebook.com/KNI.Lider/" target="_blank"><i class="fa fa-3x fa-social fa-facebook text-inverse"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
 
+
+<!-- People -->
+<section class="modal--show" id="modal-rafal" tabindex="-1"
+role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+<div class="modal-inner">
+<header id="modal-label">Rafał Miazga (SentiOne)<!-- Header --></header>
+<div class="modal-content">
+  <div class="col-sm-3">
+  <img src="assets/coachesInfo/RafalMiazgaImg.png" type="image/svg+xml" class="img-responsive"/> 
+  </div>
+  <br>
+  <div class="col-sm-9">
+  Specjalista ds. komunikacji w SentiOne,  firmie działająca w branży internetowej, której głównym produktem jest narzędzie do monitorowania internetu i mediów społecznościowych. SentiOne pozwala firmom w szybki sposób sprawdzić opinie internautów na temat produktu, marki lub firmy w sieci. Główne zastosowania systemu to: monitoring wizerunku marki, prowadzenie komunikacji z klientem online, wsparcie sprzedaży w internecie oraz ochrona przed kryzysami wizerunkowym.<!-- The modals content --></div>
+    </div>
+  <footer class="modal-footer"><!-- Footer --></footer>
+</div>
+
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
+data-dismiss="modal">?</a>
+</section>
+
+<section class="modal--show" id="modal-kasia" tabindex="-1"
+role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+<div class="modal-inner">
+<header id="modal-label">Katarzyna Kant (Catta Consulting)<!-- Header --></header>
+<div class="modal-content">
+  <div class="col-sm-3">
+  <img src="assets/coachesInfo/KatarzynaKantImg.png" type="image/svg+xml" class="img-responsive"/> 
+  </div>
+  <br>
+  <div class="col-sm-9">
+      Pomaga markom osiągać sukces w biznesie. Prowadzi szkolenia i warsztaty z zakresu marketingu, mediów społecznościowych i etykiety biznesu.<!-- The modals content --></div>
+    </div>
+  <footer class="modal-footer"><!-- Footer --></footer>
+</div>
+
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
+data-dismiss="modal">?</a>
+</section>
+
+
+<section class="modal--show" id="modal-beata" tabindex="-1"
+role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+<div class="modal-inner">
+<header id="modal-label">Beata Butkiewicz (Centrum Rozwoju Kompetencji)<!-- Header --></header>
+<div class="modal-content">
+  <div class="col-sm-3">
+  <img src="assets/coachesInfo/BeataButkiewiczImg.png" type="image/svg+xml" class="img-responsive"/> 
+  </div>
+  <br>
+  <div class="col-sm-9">
+      Pedagog, licencjonowany doradca zawodowy, coach. Wieloletni pracownik gdańskiego urzędu pracy. Ukończyła studia podyplomowe z zakresu doradztwa zawodowego na Uniwersytecie Łódzkim na Wydziale Psychologii. Na swoim koncie ma szereg szkoleń specjalistycznych z zakresu doradztwa zawodowego, coachingu, treningu umiejętności menedżerskich, interpersonalnych oraz rekrutacji i selekcji ukończonych m. in. na Akademii Leona Koźmińskiego. Uczestniczyła w szkoleniu Zarządzania Sobą i Swoimi Talentami. Posiada wieloletnie doświadczenie zawodowe w zakresie prowadzenia doradztwa zawodowego indywidualnego, jak i szkoleń warsztatowych dla różnych grup klientów. Jej działalność szkoleniowa dotyczy m. in. szkoleń z obszaru diagnozowania kompetencji, planowania kariery zawodowej, komunikacji interpersonalnej, rozwoju osobistego i zawodowego, technik autoprezentacji. W swojej pracy zawodowej stawia na profesjonalizm, wspieranie i towarzyszenie tym, którzy chcą się rozwijać.Najważniejsze talenty: zbieranie, maksymalista, bliskość, poważanie strateg.<!-- The modals content --></div>
+  </div>
+  <footer class="modal-footer"><!-- Footer --></footer>
+</div>
+
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
+data-dismiss="modal">?</a>
+</section>
+
+
+<section class="modal--show" id="modal-karol" tabindex="-1"
+role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+<div class="modal-inner">
+<header id="modal-label">Karol Gierszewski (Goyello)<!-- Header --></header>
+<div class="modal-content">
+  <div class="col-sm-3">
+  <img src="assets/coachesInfo/KarolGierszewskiImg.png" type="image/svg+xml" class="img-responsive"/> 
+  </div>
+  <br>
+  <div class="col-sm-9">
+      Certyfikowany agile tester i analityk wymagań, absolwent studiów podyplomowych z zakresu
+      testowania oprogramowania oraz inżynierii wymagań w projektach informatycznych. Prelegent
+      zarówno na lokalnych spotkaniach testerskich (TrójQA) jak i ogólnopolskich konferencjach
+      (TestWarez, Quality Excites). Od czterech lat w czołówce (2017 rok – 2 miejsce) najlepszych testerów
+      w klasyfikacji indywidualnej Mistrzostw Polski w Testowaniu Oprogramowania TestingCup. W
+      Goyello jako członek zespołów scrumowych zaraża wszystkich swoim bezkompromisowym
+      podejściem do zapewniania jakości.
+      <!-- The modals content --></div>
+  </div>
+  <footer class="modal-footer"><!-- Footer --></footer>
+</div>
+
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
+data-dismiss="modal">?</a>
+</section>
+
+
+
+<section class="modal--show" id="modal-robert" tabindex="-1"
+role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+<div class="modal-inner">
+<header id="modal-label">Robert Szulist (Aplitt)<!-- Header --></header>
+<div class="modal-content">
+  <div class="col-sm-3">
+  <img src="assets/coachesInfo/RobertSzulistImg.png" type="image/svg+xml" class="img-responsive"/> 
+  </div>
+  <br>
+  <div class="col-sm-9">
+      Entuzjasta Pythona, Azure i dzielenia się wiedzą.
+      W wolnych chwilach zajmuję się kaletnictwem i głaskaniem kotów.
+      <!-- The modals content --></div>
+  </div>
+  <footer class="modal-footer"><!-- Footer --></footer>
+</div>
+
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
+data-dismiss="modal">?</a>
+</section>
+
+
+
+<section class="modal--show" id="modal-adam" tabindex="-1"
+role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+<div class="modal-inner">
+<header id="modal-label">Adam Cetnerowski (Intel)<!-- Header --></header>
+<div class="modal-content">
+  <div class="col-sm-3">
+  <img src="assets/coachesInfo/AdamCetnerowskiImg.png" type="image/svg+xml" class="img-responsive"/> 
+  </div>
+  <br>
+  <div class="col-sm-9">
+      Adam Cetnerowski jest menadżerem zespołu tworzącego sterowniki GPGPU w firmie Intel. Zajmuje się też trenowaniem zespołów z zakresu szeroko pojętych metodologii zwinnych (Agile).
+      <!-- The modals content --></div>
+  </div>
+  <footer class="modal-footer"><!-- Footer --></footer>
+</div>
+
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
+data-dismiss="modal">?</a>
+</section>
+
+
+<section class="modal--show" id="modal-michal" tabindex="-1"
+role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+<div class="modal-inner">
+<header id="modal-label">Michal Michalczuk (Goyello)<!-- Header --></header>
+<div class="modal-content">
+  <div class="col-sm-3">
+  <img src="assets/coachesInfo/MichalMichalczukImg.png" type="image/svg+xml" class="img-responsive"/> 
+  </div>
+  <br>
+  <div class="col-sm-9">
+      Lider techniczny, Full-stack Software Developer, trener w infoShare Academy, okazjonalnie prelegent. Na froncie najczęściej walczy przy użyciu TypeScript w Angular 2 / Angular 1.x, Knockout.js oraz z wszelkiej maści task runnerami i build toolami. Na tyłach preferuje Asp.Net i C#, ale pracował w różnych językach i technologiach - od Pythona i Django, przez Wpf i Silverlight, Node.js, VBasic czy PHP. Uwielbia dzielić się wiedzą i szerzyć dobre praktyki oraz rozwiązywać proble my związane z używaniem Git-a.  Oprócz tego dumny współwłaściciel Rzecz Jasna, bistro na ul. Łąkowej na Dolnym Mieście :) Nie nudzi się, sypia, gdy jest taka potrzeba.
+      <!-- The modals content --></div>
+  </div>
+  <footer class="modal-footer"><!-- Footer --></footer>
+</div>
+
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
+data-dismiss="modal">?</a>
+</section>
+
+
+<section class="modal--show" id="modal-mateusz" tabindex="-1"
+role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+<div class="modal-inner">
+<header id="modal-label">Mateusz Turzyński (Goyello)<!-- Header --></header>
+<div class="modal-content">
+  <div class="col-sm-3">
+  <img src="assets/coachesInfo/MateuszTurzynskiImg.png" type="image/svg+xml" class="img-responsive"/> 
+  </div>
+  <br>
+  <div class="col-sm-9">
+      Software Developer w Goyello. Miłośnik czystego kodu i rozwiązań chmurowych. Na codzień zajmuje się projektowaniem skalowalnych aplikacji działających na platformie Microsoft Azure.  Stara się automatyzować procesy wdrożenia i utrzymania systemów IT. Bliżej frontendu rozwija rozwiązania w Angularze przy wykorzysaniu TypeScriptu. Prywatnie miłośnik lotnictwa cywilnego i piłki nożnej. 
+      <!-- The modals content --></div>
+  </div>
+  <footer class="modal-footer"><!-- Footer --></footer>
+</div>
+
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
+data-dismiss="modal">?</a>
+</section>
+
+
+<!-- Workshops -->
 <section class="modal--show" id="modal-sentione" tabindex="-1"
 role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 
@@ -288,7 +670,7 @@ role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 <footer class="modal-footer"><!-- Footer --></footer>
 </div>
 
-<a href="#!" class="modal-close" title="Close this modal" data-close="Close"
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
 data-dismiss="modal">?</a>
 </section>
 
@@ -301,7 +683,7 @@ role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 <footer class="modal-footer"><!-- Footer --></footer>
 </div>
 
-<a href="#!" class="modal-close" title="Close this modal" data-close="Close"
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
 data-dismiss="modal">?</a>
 </section>
 
@@ -314,7 +696,7 @@ role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 <footer class="modal-footer"><!-- Footer --></footer>
 </div>
 
-<a href="#!" class="modal-close" title="Close this modal" data-close="Close"
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
 data-dismiss="modal">?</a>
 </section>
 
@@ -327,11 +709,11 @@ role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 <footer class="modal-footer"><!-- Footer --></footer>
 </div>
 
-<a href="#!" class="modal-close" title="Close this modal" data-close="Close"
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
 data-dismiss="modal">?</a>
 </section>
 
-<section class="modal--show" id="modal-adam" tabindex="-1"
+<section class="modal--show" id="modal-intel" tabindex="-1"
 role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 
 <div class="modal-inner">
@@ -340,7 +722,7 @@ role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 <footer class="modal-footer"><!-- Footer --></footer>
 </div>
 
-<a href="#!" class="modal-close" title="Close this modal" data-close="Close"
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
 data-dismiss="modal">?</a>
 </section>
 
@@ -355,7 +737,7 @@ role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 <footer class="modal-footer"><!-- Footer --></footer>
 </div>
 
-<a href="#!" class="modal-close" title="Close this modal" data-close="Close"
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
 data-dismiss="modal">?</a>
 </section>
 
@@ -392,7 +774,7 @@ stanie jakości przedmiotu sesji testów.
 <footer class="modal-footer"><!-- Footer --></footer>
 </div>
 
-<a href="#!" class="modal-close" title="Close this modal" data-close="Close"
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
 data-dismiss="modal">?</a>
 </section>
 
@@ -410,6 +792,6 @@ przypadków biznesowych.<!-- The modals content --></div>
 <footer class="modal-footer"><!-- Footer --></footer>
 </div>
 
-<a href="#!" class="modal-close" title="Close this modal" data-close="Close"
+<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
 data-dismiss="modal">?</a>
 </section>

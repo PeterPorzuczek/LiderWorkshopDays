@@ -7,7 +7,7 @@ import { AfterViewInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent  {
 
    lat: number = 54.445340;
    lng: number = 18.553448;
@@ -18,7 +18,7 @@ export class AppComponent implements AfterViewInit {
    animData: any;
 
 
-   ngAfterViewInit() {
+   ngOnInit() {
     this.animData = {
       container: document.getElementById('logoAnim'),
       renderer: 'svg',
