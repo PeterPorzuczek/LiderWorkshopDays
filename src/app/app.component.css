@@ -191,22 +191,22 @@ a:hover {
 }
 
 .border-bottom-red {
-  border-bottom: 8px dashed #E74657;
+  border-bottom: 4px dashed #E74657;
 }
 .border-bottom-red-dark {
-  border-bottom: 8px dashed #8B1E38;
+  border-bottom: 4px dashed #8B1E38;
 }
 .border-bottom-blue {
-  border-bottom: 8px dashed #0BA2E4;
+  border-bottom: 4px dashed #0BA2E4;
 }
 .border-bottom-blue-dark {
-  border-bottom: 8px dashed #0D497F;
+  border-bottom: 4px dashed #0D497F;
 }
 .border-right-blue {
-  border-right: 8px dashed #0BA2E4;
+  border-right: 4px dashed #0BA2E4;
 }
 .border-right-blue-dark {
-  border-right: 8px dashed #0D497F;
+  border-right: 4px dashed #0D497F;
 }
 @media only screen and (max-width: 780px) {
   .border-right-blue {
