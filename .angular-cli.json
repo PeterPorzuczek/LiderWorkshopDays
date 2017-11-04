@@ -26,9 +26,7 @@
         "../node_modules/css-modal/build/modal.css",
         "styles.css"
       ],
-      "scripts": [  
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
-      ],
+      "scripts": [  ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

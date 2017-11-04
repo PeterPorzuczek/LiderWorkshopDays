@@ -3,13 +3,8 @@
     <label for="toggle-nav" data-icon="☰" role="navigation"></label>
     <input type="checkbox" id="toggle-nav">
     <span class="brand"><img class="navLogo" src="assets/logoSite.svg" type="image/svg+xml"/></span>        
-    <ul class="menu" role="menu">
-      <li><a href="#start">Start</a></li>
-      <li><a href="#warsztaty">Warsztaty</a></li>
-      <li><a href="#trenerzy">Trenerzy</a></li> 
-      <li><a href="#patroni">Patroni</a></li>
-      <li><a href="#miejsce">Miejsce</a></li>
-      <li><a href="https://lwd2017.evenea.pl"class="nav-signup">Zapisz się już teraz</a></li>
+    <ul class="menu" role="menu" >
+      <li *ngFor="let menuItem of menuItems"><a href="{{menuItem.href}}" class="{{menuItem.class}}">{{menuItem.title}}</a></li>
     </ul>
   </nav>
   <div class="container-fluid nopadding" id="start">
@@ -44,16 +39,15 @@
             <p>Na warsztatach zdobędziesz niezbędną wiedzę 💡, a przede wszystkim praktyczne umiejętności w wybranej przez Ciebie tematyce. W tym roku przewidujemy jeszcze więcej atrakcji i jeszcze większą porcję nowinek z IT. Będzie się działo!</p>
         </div>
     </div>
+  </div>
 
+  <div class="information-additional">
+    <div class="row">
+      <div class="col-lg-12 padding-horizontal padding-vertical-mob">
+        <p>Wydarzenie dedykowane jest studentom kierunków o profilach informatycznych, inżynierom IT oraz wszystkim zainteresowanym programowaniem oraz analityką biznesową. Ponad 160 osób będzie miało okazję wziąć udział w prelekcjach autorytetów w dziedzinie IT na Wydziale Zarządzania Uniwersytetu Gdańskiego. Lider Workshop Days to doskonałe miejsce zarówno do nawiązania kontaktów ze znawcami i specjalistami nowych technologii, jak i wymiany wzajemnych doświadczeń.</p>
+      </div>
     </div>
-
-    <div class="information-additional">
-        <div class="row">
-            <div class="col-lg-12 padding-horizontal padding-vertical-mob">
-                <p>Wydarzenie dedykowane jest studentom kierunków o profilach informatycznych, inżynierom IT oraz wszystkim zainteresowanym programowaniem oraz analityką biznesową. Ponad 160 osób będzie miało okazję wziąć udział w prelekcjach autorytetów w dziedzinie IT na Wydziale Zarządzania Uniwersytetu Gdańskiego. Lider Workshop Days to doskonałe miejsce zarówno do nawiązania kontaktów ze znawcami i specjalistami nowych technologii, jak i wymiany wzajemnych doświadczeń.</p>
-            </div>
-        </div>
-    </div>
+  </div>
 
   <div class="head container-fluid">
     <div id="warsztaty" class="row-fluid">
@@ -63,213 +57,60 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="left col-sm-6 col-md-6 col-lg-6 side col-centered nopadding">
-        
-        <div class="schedule-registration-head background-red border-bottom-red-dark border-right-blue">
-          <div class="row-fluid">
-            <div class="text-red-dark"> 
-              <h3>07.11.2017</h3>
+      <div class="{{x%2==0?'left col-sm-6 col-md-6 col-lg-6 side col-centered nopadding':'right col-sm-6 col-md-6 col-lg-6 side col-centered nopadding'}}" *ngFor="let scheduleItems of days; let x = index">
+        <div *ngFor="let scheduleItem of scheduleItems; let y = index" class="{{scheduleItem.classMain}}">
+          <div *ngIf="scheduleItem.itemType == 1"  class="row-fluid">
+            <div class="{{scheduleItem.classTitle}}"> 
+              <h3>{{scheduleItem.title}}</h3>
             </div>
-            <div class="schedule-registration-hours border-red-dark text-right">
-              <h6>11:00</h6>
+            <div class="{{scheduleItem.classHour}}">
+              <h6>{{scheduleItem.hour}}</h6>
             </div>
-            <div class="schedule-registration-info border-red-dark text-left">
-              <h6>Rejestracja</h6>
+            <div class="{{scheduleItem.classContent}}">
+              <h6>{{scheduleItem.content}}</h6>
             </div>
           </div>
-        </div>
-
-        <div class="schedule-workshop-head background-red-dark border-bottom-red border-right-blue-dark">
-          <div class="row-fluid text-red">
-            <h4>Analityka</h4>
+          <div *ngIf="scheduleItem.itemType == 2" class="{{scheduleItem.classTitle}}">
+            <h4>{{scheduleItem.title}}</h4>
           </div>
-        </div>
-
-        <div class="schedule-workshop-content background-red border-bottom-red-dark border-right-blue">
-          <div class="schedule-title">
-            <h5>Dowiedz się, co w sieci piszczy. Monitoring internetu jako źródło wiedzy o dyskusjach internautów.</h5>
+          <div *ngIf="scheduleItem.itemType == 3">
+          <div class="{{scheduleItem.classTitle}}">
+            <h5><div *ngFor="let textBreaked of scheduleItem.title.split('<br>')">{{textBreaked}}<br/></div></h5>
           </div>
-          <div class="schedule-separator border-red-dark"></div>
+          <div class="{{scheduleItem.separatorClass}}"></div>
           <div>
-            <div class="schedule-hours border-red-dark">
-              <h6>11:30 - 15:00 - SALA C24</h6>
+            <div class="{{scheduleItem.classHour}}">
+              <h6>{{scheduleItem.hour}}</h6>
             </div>
-            <div class="schedule-coach border-red-dark">
-              <h6>Rafał Miazga (SentiOne)</h6>
+            <div class="{{scheduleItem.classContent}}">
+              <h6>{{scheduleItem.content}}</h6>
             </div>
           </div>
-          <div class="schedule-more border-red-dark">
-            <a href="#modal-sentione" class="nopadding" ><!--onclick="return false"-->
-              <h6 class="on-hover-scale-up">Więcej</h6>
+          <div class="{{scheduleItem.classMore}}">
+            <a href="#{{scheduleItem.href}}" class="nopadding" ><!--onclick="return false"-->
+              <h6 class="on-hover-scale-up">{{scheduleItem.more}}</h6>
             </a>
           </div>
         </div>
 
-        <div class="schedule-workshop-content background-red-dark border-bottom-red border-right-blue-dark">
-          <div class="schedule-title">
-            <h5>Budowanie strategii social media <br>dla marki  </h5>
-          </div>
-          <div class="schedule-separator border-red"></div>
-          <div>
-            <div class="schedule-hours border-red">
-              <h6>15:15- 18:00 - SALA C21</h6>
+        <section *ngIf="scheduleItem.itemType == 3" class="modal--show" id="{{scheduleItem.href}}" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+          <div class="modal-inner">
+            <header id="modal-label">
+              <div *ngFor="let textBreaked of scheduleItem.title.split('<br>')">{{textBreaked}}<br/></div>
+            </header>
+            <div class="modal-content">
+              <div class="bottom-buffer-2">
+                <p>{{scheduleItem.description}}</p>
+              </div>       
+              <div id="evenea-r" class="col-lg-12 col-centered bottom-buffer-2">         
+                <a id="evenea-btn" href="https://lwd2017.evenea.pl">ZAPISZ SIĘ<span class="fa fa-pencil fa-icon"></span></a>       
+              </div>
             </div>
-            <div class="schedule-coach border-red">
-              <h6>Katarzyna Kant (Catta Consulting)</h6>
-            </div>
+            <footer class="modal-footer"></footer>
           </div>
-          <div class="schedule-more border-red">
-            <a href="#modal-catta" class="nopadding">
-              <h6 class="on-hover-scale-up">Więcej</h6>
-            </a>
-          </div> 
-        </div>
-        <div class="schedule-workshop-head background-red border-bottom-red-dark border-right-blue">
-          <div class="row-fluid text-red-dark">
-            <h4>Programowanie</h4>
-          </div>
-        </div>
-        <div class="schedule-workshop-content background-red-dark border-bottom-red border-right-blue-dark">
-          <div class="schedule-title" >
-            <h5>Spring Framework <br> Live Coding</h5>
-          </div>
-          <div class="schedule-separator border-red"></div>
-          <div>
-            <div class="schedule-hours border-red">
-              <h6>11:30 - 15:00 - SALA C36</h6>
-            </div>
-            <div class="schedule-coach border-red">
-              <h6>Asseco</h6>
-            </div>
-          </div>
-          <div class="schedule-more border-red">
-            <a href="#modal-asseco" class="nopadding">
-              <h6 class="on-hover-scale-up">Więcej</h6>
-            </a>
-          </div>
-        </div>
-        <div class="schedule-workshop-content background-red border-right-blue">        
-          <div class="schedule-title">
-            <h5>Podstawy programowania w Pythonie wraz z wizualizacją danych</h5>
-          </div>
-          <div class="schedule-separator border-red-dark"></div>
-          <div>
-            <div class="schedule-hours border-red-dark">
-              <h6>15:15- 19:00 - SALA C36</h6>
-            </div>
-            <div class="schedule-coach border-red-dark">
-              <h6>Robert Szulist (Aplitt)</h6>
-            </div>
-          </div>
-          <div class="schedule-more border-red-dark">
-            <a href="#modal-aplitt" class="nopadding">
-                <h6 class="on-hover-scale-up">Więcej</h6>
-            </a>
-          </div>
-        </div>
-
+          <a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij" data-dismiss="modal">?</a>
+        </section>
       </div>
-      <div class="right col-sm-6 col-md-6 col-lg-6 col-centered nopadding">
-        <div class="schedule-registration-head background-blue border-bottom-blue-dark">
-          <div class="row-fluid">
-            <div class="text-blue-dark">
-              <h3>08.11.2017</h3>
-            </div>
-            <div class="schedule-registration-hours border-blue-dark text-right">
-              <h6>11:00</h6>
-            </div>
-            <div class="schedule-registration-info border-blue-dark text-left">
-              <h6>Rejestracja</h6>
-            </div>
-          </div>
-        </div>
-        <div class="schedule-workshop-head background-blue-dark border-bottom-blue">
-          <div class="row-fluid text-blue">
-            <h4>Analityka</h4>
-          </div>
-        </div>
-        <div class="schedule-workshop-content background-blue border-bottom-blue-dark">
-          <div class="schedule-title">
-            <h5>Praca w metodologii Kanban <br>na bazie firmy informatycznej</h5>
-          </div>
-          <div class="schedule-separator border-blue-dark"></div>
-          <div>
-            <div class="schedule-hours border-blue-dark">
-              <h6>12:00- 15:00 - SALA C21</h6>
-            </div>
-            <div class="schedule-coach border-blue-dark">
-              <h6>Adam Cetnerowski (Intel)</h6>
-            </div>
-          </div>
-          <div class="schedule-more border-blue-dark">
-            <a href="#modal-intel" class="nopadding">
-              <h6 class="on-hover-scale-up">Więcej</h6>
-            </a>
-          </div>
-        </div>
-        <div class="schedule-workshop-content background-blue-dark border-bottom-blue">
-          <div class="schedule-title">
-            <h5>Piramida zmian <br> zarządzaj własnym rozwojem</h5>
-          </div>
-          <div class="schedule-separator border-blue"></div>
-          <div>
-            <div class="schedule-hours border-blue">
-              <h6>16:00 - 18:00 - SALA C21</h6>
-            </div>
-            <div class="schedule-coach border-blue">
-              <h6>Beata Butkiewicz (CRT)</h6>
-            </div>
-          </div>
-          <div class="schedule-more border-blue">
-            <a href="#modal-crt" class="nopadding">
-              <h6 class="on-hover-scale-up">Więcej</h6>
-            </a>
-          </div>
-        </div>
-        <div class="schedule-workshop-head background-blue border-bottom-blue-dark">
-          <div class="row-fluid text-blue-dark">
-            <h4>Programowanie</h4>
-          </div>
-        </div>
-        <div class="schedule-workshop-content background-blue-dark border-bottom-blue">
-          <div class="schedule-title">
-            <h5>Testowanie <br> eksploracyjne</h5>
-          </div>
-          <div class="schedule-separator border-blue"></div>
-          <div>
-            <div class="schedule-hours border-blue">
-              <h6>11.15 - 15.00 - SALA C36</h6>
-            </div>
-            <div class="schedule-coach border-blue">
-              <h6>Karol Gierszewski (Goyello)</h6>
-            </div>
-          </div>
-          <div class="schedule-more border-blue">
-            <a href="#modal-yello1" class="nopadding">
-              <h6 class="on-hover-scale-up">Więcej</h6>
-            </a>
-          </div>
-        </div>
-        <div class="schedule-workshop-content background-blue">
-          <div class="schedule-title">
-            <h5>Rozwój aplikacji w podejściu TDD <br>(Test Driven Development)</h5>
-          </div>
-          <div class="schedule-separator border-blue-dark"></div>
-          <div>
-            <div class="schedule-hours border-blue-dark">
-              <h6>15.15-19.00 - SALA C36</h6>
-            </div>
-            <div class="schedule-coach border-blue-dark">
-              <h6>Michał Michalczuk, Mateusz Turzyński (Goyello)</h6>
-            </div>
-          </div>
-          <div class="schedule-more border-blue-dark">
-            <a href="#modal-yello2" class="nopadding">
-              <h6 class="on-hover-scale-up">Więcej</h6>
-            </a>
-          </div>       
-        </div>
-
       </div>
     </div>
   </div>
@@ -281,98 +122,40 @@
   </div>
 
   <div class="container-fluid">
-    <div class="row">
-      <div class="left col-sm-6 col-md-6 col-lg-6 side col-centered nopadding" >
-        <a href="#modal-rafal" class="nopadding">
-          <div class="left-div"> 
-            <div class="row padding-vertical">
-              <img src="assets/coachesInfo/RafalMiazgaImg.png" type="image/svg+xml" class="img-responsive"/>
-            </div>
-            <div class="row ">
-              <img src="assets/coachesInfo/RafalMiazgaDesc.svg" type="image/svg+xml" class="img-responsive"/>
-            </div>
+    <div class="row" *ngFor="let coachesRow of coaches">
+      <div *ngFor="let coachesPair of coachesRow; let x = index">
+        <div class="{{x%2==0?'left col-sm-6 col-md-6 col-lg-6 side col-centered nopadding':'right col-sm-6 col-md-6 col-lg-6 side col-centered nopadding'}}">
+          <div class="nopadding display-inline" *ngFor="let coach of coachesPair; let y = index">
+            <a href="#{{coach.href}}" class="nopadding" >
+              <div class="{{y%2==0?'left-div':'right-div'}}"> 
+                <div class="row padding-vertical"> 
+                  <img src="{{coach.srcImg}}" type="image/svg+xml" class="img-responsive"/>
+                </div>
+                <div class="row">
+                  <img src="{{coach.srcDesc}}" type="image/svg+xml" class="img-responsive"/>
+                </div>
+              </div>
+            </a>
+            <section class="modal--show" id="{{coach.href}}" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+              <div class="modal-inner">
+                <header id="modal-label">
+                  {{coach.name}}
+                </header>
+                <div class="modal-content">
+                  <div class="col-sm-3">
+                    <img src="{{coach.srcImg}}" type="image/svg+xml" class="img-responsive"/> 
+                  </div>
+                  <br>
+                  <div class="col-sm-9">
+                    {{coach.desc}}
+                  </div>
+                </div>
+                <footer class="modal-footer"></footer>
+              </div>
+              <a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij" data-dismiss="modal">?</a>
+            </section>
           </div>
-        </a>
-        <a href="#modal-kasia" class="nopadding">
-          <div  class="right-div"> 
-            <div class="row padding-vertical">
-              <img src="assets/coachesInfo/KatarzynaKantImg.png" type="image/svg+xml" class="img-responsive"/>
-            </div>
-            <div class="row ">
-              <img src="assets/coachesInfo/KatarzynaKantDesc.svg" type="image/svg+xml" class="img-responsive"/>
-            </div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="right col-sm-6 col-md-6 col-lg-6 side col-centered nopadding">
-        <a href="#modal-beata" class="nopadding">
-          <div class="left-div"> 
-            <div class="row padding-vertical">
-              <img src="assets/coachesInfo/BeataButkiewiczImg.png" type="image/svg+xml" class="img-responsive"/>
-            </div>
-            <div class="row">
-              <img src="assets/coachesInfo/BeataButkiewiczDesc.svg" type="image/svg+xml" class="img-responsive"/>
-            </div>
-          </div>
-        </a>
-        <a href="#modal-karol" class="nopadding">
-          <div class="right-div"> 
-            <div class="row padding-vertical">
-              <img src="assets/coachesInfo/KarolGierszewskiImg.png" type="image/svg+xml" class="img-responsive"/>
-            </div>
-            <div class="row">
-              <img src="assets/coachesInfo/KarolGierszewskiDesc.svg" type="image/svg+xml" class="img-responsive"/>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="left col-sm-6 col-md-6 col-lg-6 side col-centered nopadding">
-        <a href="#modal-robert" class="nopadding">
-          <div class="left-div"> 
-            <div class="row padding-vertical">
-              <img src="assets/coachesInfo/RobertSzulistImg.png" type="image/svg+xml" class="img-responsive"/>
-            </div>
-            <div class="row">
-              <img src="assets/coachesInfo/RobertSzulistDesc.svg" type="image/svg+xml" class="img-responsive"/>
-            </div>
-          </div>
-        </a>
-        <a href="#modal-adam" class="nopadding">
-          <div class="right-div"> 
-            <div class="row padding-vertical">
-              <img src="assets/coachesInfo/AdamCetnerowskiImg.png" type="image/svg+xml" class="img-responsive"/>
-            </div>
-            <div class="row">
-              <img src="assets/coachesInfo/AdamCetnerowskiDesc.svg" type="image/svg+xml" class="img-responsive"/>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="right col-sm-6 col-md-6 col-lg-6 side col-centered nopadding">
-        <a href="#modal-michal" class="nopadding">
-          <div class="left-div"> 
-            <div class="row padding-vertical">
-              <img src="assets/coachesInfo/MichalMichalczukImg.png" type="image/svg+xml" class="img-responsive"/>
-            </div>
-            <div class="row">
-              <img src="assets/coachesInfo/MichalMichalczukDesc.svg" type="image/svg+xml" class="img-responsive"/>
-            </div>
-          </div>
-        </a>
-        <a href="#modal-mateusz" class="nopadding">
-          <div class="right-div"> 
-            <div class="row padding-vertical"> 
-              <img src="assets/coachesInfo/MateuszTurzynskiImg.png" type="image/svg+xml" class="img-responsive"/>
-            </div>
-            <div class="row">
-              <img src="assets/coachesInfo/MateuszTurzynskiDesc.svg" type="image/svg+xml" class="img-responsive"/>
-            </div>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
   </div>
@@ -386,40 +169,9 @@
   <div class="patrons">
     <div class="container-fluid">
       <div class="row text-center">
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a  href="http://gdansk.pl/"><img src="assets/patrons/gdanskpl.svg" type="image/svg+xml" class="patron center-block img-responsive"/></a>
+        <div class="col-md-3 col-sm-4 col-xs-6" *ngFor="let patron of patrons">
+          <a href="{{patron.href}}"><img src="{{patron.src}}" class="{{patron.class}}"/></a>
         </div>
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a  href="https://radiogdansk.pl"><img src="assets/patrons/radiogdansk.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a  href="http://gdansk.dlawas.info"><img src="assets/patrons/gdanskdlawas.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a  href="https://goyello.com/pl/"><img src="assets/patrons/goyello.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a  href="https://aplitt.pl/pl/"><img src="assets/patrons/aplitt.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a  href="http://www.centrumtalentow.pl"><img src="assets/patrons/crt.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a  href="https://pl.asseco.com"><img src="assets/patrons/asseco.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a  href="http://catta.pl"><img src="assets/patrons/catta.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a  href="https://sentione.com/pl"><img src="assets/patrons/sentione.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a  href="http://gdynia.pl"><img src="assets/patrons/gdynia.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6">
-          <a  href="http://www.study-gdansk.com"><img src="assets/patrons/studyingdansk.svg" type="image/svg+xml" class="patron center-block  img-responsive"/></a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6"></div>
       </div>
     </div>
   </div>
@@ -443,8 +195,8 @@
         </div>        
       </div>
       <div class="right col-sm-6 col-md-6 col-lg-6 side col-centered nopadding">
-        <agm-map [latitude]="lat" [longitude]="lng" [zoom]=18 >
-          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>            
+        <agm-map [latitude]="position[0]" [longitude]="position[1]" [zoom]=18 >
+          <agm-marker [latitude]="position[0]" [longitude]="position[1]"></agm-marker>            
         </agm-map>
       </div>
     </div>
@@ -470,300 +222,3 @@
     </div>
   </div>
 </footer>
-
-
-<!-- People -->
-<section class="modal--show" id="modal-rafal" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-  <div class="modal-inner">
-    <header id="modal-label">Rafał Miazga (SentiOne)<!-- Header --></header>
-    <div class="modal-content">
-      <div class="col-sm-3">
-        <img src="assets/coachesInfo/RafalMiazgaImg.png" type="image/svg+xml" class="img-responsive"/> 
-      </div>
-      <br>
-      <div class="col-sm-9">
-        Specjalista ds. komunikacji w SentiOne,  firmie działająca w branży internetowej, której głównym produktem jest narzędzie do monitorowania internetu i mediów społecznościowych. SentiOne pozwala firmom w szybki sposób sprawdzić opinie internautów na temat produktu, marki lub firmy w sieci. Główne zastosowania systemu to: monitoring wizerunku marki, prowadzenie komunikacji z klientem online, wsparcie sprzedaży w internecie oraz ochrona przed kryzysami wizerunkowym.
-      <!-- The modals content --></div>
-    </div>
-    <footer class="modal-footer"><!-- Footer --></footer>
-  </div>
-  <a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-  data-dismiss="modal">?</a>
-</section>
-
-<section class="modal--show" id="modal-kasia" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Katarzyna Kant (Catta Consulting)<!-- Header --></header>
-<div class="modal-content">
-  <div class="col-sm-3">
-  <img src="assets/coachesInfo/KatarzynaKantImg.png" type="image/svg+xml" class="img-responsive"/> 
-  </div>
-  <br>
-  <div class="col-sm-9">
-      Pomaga markom osiągać sukces w biznesie. Prowadzi szkolenia i warsztaty z zakresu marketingu, mediów społecznościowych i etykiety biznesu.<!-- The modals content --></div>
-    </div>
-  <footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-
-<section class="modal--show" id="modal-beata" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Beata Butkiewicz (Centrum Rozwoju Kompetencji)<!-- Header --></header>
-<div class="modal-content">
-  <div class="col-sm-3">
-  <img src="assets/coachesInfo/BeataButkiewiczImg.png" type="image/svg+xml" class="img-responsive"/> 
-  </div>
-  <br>
-  <div class="col-sm-9">
-      Pedagog, licencjonowany doradca zawodowy, coach. Wieloletni pracownik gdańskiego urzędu pracy. Ukończyła studia podyplomowe z zakresu doradztwa zawodowego na Uniwersytecie Łódzkim na Wydziale Psychologii. Na swoim koncie ma szereg szkoleń specjalistycznych z zakresu doradztwa zawodowego, coachingu, treningu umiejętności menedżerskich, interpersonalnych oraz rekrutacji i selekcji ukończonych m. in. na Akademii Leona Koźmińskiego. Uczestniczyła w szkoleniu Zarządzania Sobą i Swoimi Talentami. Posiada wieloletnie doświadczenie zawodowe w zakresie prowadzenia doradztwa zawodowego indywidualnego, jak i szkoleń warsztatowych dla różnych grup klientów. Jej działalność szkoleniowa dotyczy m. in. szkoleń z obszaru diagnozowania kompetencji, planowania kariery zawodowej, komunikacji interpersonalnej, rozwoju osobistego i zawodowego, technik autoprezentacji. W swojej pracy zawodowej stawia na profesjonalizm, wspieranie i towarzyszenie tym, którzy chcą się rozwijać.Najważniejsze talenty: zbieranie, maksymalista, bliskość, poważanie strateg.<!-- The modals content --></div>
-  </div>
-  <footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-
-<section class="modal--show" id="modal-karol" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Karol Gierszewski (Goyello)<!-- Header --></header>
-<div class="modal-content">
-  <div class="col-sm-3">
-  <img src="assets/coachesInfo/KarolGierszewskiImg.png" type="image/svg+xml" class="img-responsive"/> 
-  </div>
-  <br>
-  <div class="col-sm-9">
-      Certyfikowany agile tester i analityk wymagań, absolwent studiów podyplomowych z zakresu
-      testowania oprogramowania oraz inżynierii wymagań w projektach informatycznych. Prelegent
-      zarówno na lokalnych spotkaniach testerskich (TrójQA) jak i ogólnopolskich konferencjach
-      (TestWarez, Quality Excites). Od czterech lat w czołówce (2017 rok – 2 miejsce) najlepszych testerów
-      w klasyfikacji indywidualnej Mistrzostw Polski w Testowaniu Oprogramowania TestingCup. W
-      Goyello jako członek zespołów scrumowych zaraża wszystkich swoim bezkompromisowym
-      podejściem do zapewniania jakości.
-      <!-- The modals content --></div>
-  </div>
-  <footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-
-
-<section class="modal--show" id="modal-robert" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Robert Szulist (Aplitt)<!-- Header --></header>
-<div class="modal-content">
-  <div class="col-sm-3">
-  <img src="assets/coachesInfo/RobertSzulistImg.png" type="image/svg+xml" class="img-responsive"/> 
-  </div>
-  <br>
-  <div class="col-sm-9">
-      Entuzjasta Pythona, Azure i dzielenia się wiedzą.
-      W wolnych chwilach zajmuję się kaletnictwem i głaskaniem kotów.
-      <!-- The modals content --></div>
-  </div>
-  <footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-
-
-<section class="modal--show" id="modal-adam" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Adam Cetnerowski (Intel)<!-- Header --></header>
-<div class="modal-content">
-  <div class="col-sm-3">
-  <img src="assets/coachesInfo/AdamCetnerowskiImg.png" type="image/svg+xml" class="img-responsive"/> 
-  </div>
-  <br>
-  <div class="col-sm-9">
-      Adam Cetnerowski jest menadżerem zespołu tworzącego sterowniki GPGPU w firmie Intel. Zajmuje się też trenowaniem zespołów z zakresu szeroko pojętych metodologii zwinnych (Agile).
-      <!-- The modals content --></div>
-  </div>
-  <footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-
-<section class="modal--show" id="modal-michal" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Michal Michalczuk (Goyello)<!-- Header --></header>
-<div class="modal-content">
-  <div class="col-sm-3">
-  <img src="assets/coachesInfo/MichalMichalczukImg.png" type="image/svg+xml" class="img-responsive"/> 
-  </div>
-  <br>
-  <div class="col-sm-9">
-      Lider techniczny, Full-stack Software Developer, trener w infoShare Academy, okazjonalnie prelegent. Na froncie najczęściej walczy przy użyciu TypeScript w Angular 2 / Angular 1.x, Knockout.js oraz z wszelkiej maści task runnerami i build toolami. Na tyłach preferuje Asp.Net i C#, ale pracował w różnych językach i technologiach - od Pythona i Django, przez Wpf i Silverlight, Node.js, VBasic czy PHP. Uwielbia dzielić się wiedzą i szerzyć dobre praktyki oraz rozwiązywać proble my związane z używaniem Git-a.  Oprócz tego dumny współwłaściciel Rzecz Jasna, bistro na ul. Łąkowej na Dolnym Mieście :) Nie nudzi się, sypia, gdy jest taka potrzeba.
-      <!-- The modals content --></div>
-  </div>
-  <footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-
-<section class="modal--show" id="modal-mateusz" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Mateusz Turzyński (Goyello)<!-- Header --></header>
-<div class="modal-content">
-  <div class="col-sm-3">
-  <img src="assets/coachesInfo/MateuszTurzynskiImg.png" type="image/svg+xml" class="img-responsive"/> 
-  </div>
-  <br>
-  <div class="col-sm-9">
-      Software Developer w Goyello. Miłośnik czystego kodu i rozwiązań chmurowych. Na codzień zajmuje się projektowaniem skalowalnych aplikacji działających na platformie Microsoft Azure.  Stara się automatyzować procesy wdrożenia i utrzymania systemów IT. Bliżej frontendu rozwija rozwiązania w Angularze przy wykorzysaniu TypeScriptu. Prywatnie miłośnik lotnictwa cywilnego i piłki nożnej. 
-      <!-- The modals content --></div>
-  </div>
-  <footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-
-<!-- Workshops -->
-<section class="modal--show" id="modal-sentione" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Dowiedz się, co w sieci piszczy. Monitoring internetu jako źródło wiedzy o dyskusjach internautów<!-- Header --></header>
-<div class="modal-content"><div class="bottom-buffer-2"><p>Prowadząc działalność w sieci, kluczowym jest, aby na bieżąco śledzić wszelkie wzmianki na temat marki, które pojawiają się w internecie. Podczas warsztatu nauczycie się korzystać z narzędzia przeznaczonego do monitorowania sieci.
-  </p></div>       <div id="evenea-r" class="col-lg-12 col-centered bottom-buffer-2">         <a id="evenea-btn" href="https://lwd2017.evenea.pl">ZAPISZ SIĘ<span class="fa fa-pencil fa-icon"></span></a>       </div><!-- The modals content --></div>
-<footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-<section class="modal--show" id="modal-catta" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Budowanie strategii social media dla marki<!-- Header --></header>
-<div class="modal-content"><div class="bottom-buffer-2"><p>Podczas warsztatu dowiecie się, jak w spójny i przemyślany sposób zbudować strategię działań w social media dla marki lub organizacji pozarządowej. Poznacie narzędzia, które pomogą analizować efekty pracy i optymalizować kampanie.</p></div>       <div id="evenea-r" class="col-lg-12 col-centered bottom-buffer-2">         <a id="evenea-btn" href="https://lwd2017.evenea.pl">ZAPISZ SIĘ<span class="fa fa-pencil fa-icon"></span></a>       </div><!-- The modals content --></div>
-<footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-<section class="modal--show" id="modal-asseco" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Spring Framework <br> Live Coding<!-- Header --></header>
-<div class="modal-content"><div class="bottom-buffer-2"><p>Spring to szkielet wytwarzania aplikacji (framework), dzięki któremu proces budowania oprogramowania w języku Java staje się znacznie prostsze i efektywniejsze.</p></div>       <div id="evenea-r" class="col-lg-12 col-centered bottom-buffer-2">         <a id="evenea-btn" href="https://lwd2017.evenea.pl">ZAPISZ SIĘ<span class="fa fa-pencil fa-icon"></span></a>       </div><!-- The modals content --></div>
-<footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-<section class="modal--show" id="modal-aplitt" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Podstawy programowania w Pythonie wraz z wizualizacją danych<!-- Header --></header>
-<div class="modal-content"><div class="bottom-buffer-2"><p>Warsztat skierowany do osób początkujących, podczas którego można będzie się nauczyć sterowania programem, podstaw obróbki i prezentacji danych.</p></div>       <div id="evenea-r" class="col-lg-12 col-centered bottom-buffer-2">         <a id="evenea-btn" href="https://lwd2017.evenea.pl">ZAPISZ SIĘ<span class="fa fa-pencil fa-icon"></span></a>       </div><!-- The modals content --></div>
-<footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-<section class="modal--show" id="modal-intel" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Praca w metodologii Kanban <br>na bazie firmy informatycznej<!-- Header --></header>
-<div class="modal-content"><div class="bottom-buffer-2"><p>Kanban obok Scrum jest jedną z najbardziej popularnych metodologii zwinnych. Podczas warsztatów uczestnicy będą mieli możliwość zapoznania się założeniami teoretycznymi metodologii jak również przejść symulację kierowania zespołem korzystającym z Kanban przy tworzeniu oprogramowania.    </p></div>       <div id="evenea-r" class="col-lg-12 col-centered bottom-buffer-2">         <a id="evenea-btn" href="https://lwd2017.evenea.pl">ZAPISZ SIĘ<span class="fa fa-pencil fa-icon"></span></a>       </div><!-- The modals content --></div>
-<footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-
-
-<section class="modal--show" id="modal-crt" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Piramida zmian <br> zarządzaj własnym rozwojem<!-- Header --></header>
-<div class="modal-content"><div class="bottom-buffer-2"><p>Korzyści:<br>zidentyfikujesz własne kompetencje <br>dowiesz się, jak proaktywną postawą stymulować własny potencjał <br>świadomie zaplanujesz swoją przyszłość zawodową</p></div>       <div id="evenea-r" class="col-lg-12 col-centered bottom-buffer-2">         <a id="evenea-btn" href="https://lwd2017.evenea.pl">ZAPISZ SIĘ<span class="fa fa-pencil fa-icon"></span></a>       </div><!-- The modals content --></div>
-<footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-
-<section class="modal--show" id="modal-yello1" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Testowanie <br> eksploracyjne<!-- Header --></header>
-<div class="modal-content"><div class="bottom-buffer-2"><p>Testowanie eksploracyjne to sposób przeprowadzania testów przy jednoczesnej nauce zasad funkcjonowania aplikacji. Podczas warsztatu nauczymy się w jaki sposób przeprowadzić efektywną sesję testów eksploracyjnych oraz na jakie aspekty podczas testowania należy zwracać szczególną uwagę. Efektem prac będzie raport o stanie jakości dowolnej wybranej przez siebie aplikacji internetowej.  
-</p></div>       <div id="evenea-r" class="col-lg-12 col-centered bottom-buffer-2">         <a id="evenea-btn" href="https://lwd2017.evenea.pl">ZAPISZ SIĘ<span class="fa fa-pencil fa-icon"></span></a>       </div><!-- The modals content --></div>
-<footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
-
-
-
-<section class="modal--show" id="modal-yello2" tabindex="-1"
-role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-<div class="modal-inner">
-<header id="modal-label">Rozwój aplikacji w podejściu TDD <br>(Test Driven Development)<!-- Header --></header>
-<div class="modal-content"><div class="bottom-buffer-2"><p>Zapraszamy na warsztaty Test-Driven Development. Podczas spotkania dowiesz się czym są testy
-jednostkowe, czym jest technika TDD oraz jak testy pozwalają utrzymywać czysty kod. Przewidujemy
-pair-programming, pisanie kodu techniką RGF (red-green- refactor) oraz rozwiązywane realnych
-przypadków biznesowych.</p></div>       <div id="evenea-r" class="col-lg-12 col-centered bottom-buffer-2">         <a id="evenea-btn" href="https://lwd2017.evenea.pl">ZAPISZ SIĘ<span class="fa fa-pencil fa-icon"></span></a>       </div><!-- The modals content --></div>
-<footer class="modal-footer"><!-- Footer --></footer>
-</div>
-
-<a href="#!" class="modal-close" title="Close this modal" data-close="Zamknij"
-data-dismiss="modal">?</a>
-</section>
