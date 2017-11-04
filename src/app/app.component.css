@@ -1,278 +1,380 @@
-/* You can add global styles to this file, and also import other style files */
-
+/*Main*/
 body, html {
-    font-family: 'Montserrat';
-    background-color: #1F2436;
+  font-family: 'Montserrat';
+  background-color: #1F2436;
+}
+p, a {
+  font-family: 'Montserrat';
+}
+a {
+  color:white;
+  text-decoration: none;
+}
+@media only screen and (max-width: 759px) {
+  a {
+    margin: -1px !important;
+    padding: 0px;
+    width:101%;
   }
-  p, a {
-    font-family: 'Montserrat';
+}
+ul, li {
+  margin: 0 !important;
+  padding: 0 !important;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+@media only screen and (max-width: 1000px) {
+  ul, li {
+    letter-spacing: 0px;
+    font-size: 14px;
   }
-  header {
-    border-bottom: 0px !important;
+}
+agm-map {
+  height: 370px;
+}
+@media only screen and (max-width: 759px) { 
+  agm-map {
+    height: 320px;
   }
-  h1 {
-  /*font-family: 'Montserrat';*/
+}
+@media only screen and (max-width: 500px) {
+  agm-map {  
+    height: 400px;
+  }
+}
+header {
+  border-bottom: 0px !important;
+}
+h1 {
   font-family: 'League Spartan';
   font-weight: 700;
-  }
-  h2 {
-  /*font-family: 'Montserrat';*/
+}
+h2 {
   font-family: 'Montserrat';
   font-weight: 300;
-  }
-  h3 {
-  /*font-family: 'Montserrat';*/
+}
+h3 {
   font-family: 'League Spartan';
   font-weight: 700;
   font-size: 2.1em;
   margin:7px;
-  }
-  h4 {
-  /*font-family: 'Montserrat';*/
+}
+h4 {
   font-family: 'League Spartan';
   font-weight: 700;
   font-size: 1.8em;
   margin:7px;
-  }
-  h5 {
-  /*font-family: 'Montserrat';*/
-  font-family: 'Montserrat' !important;
-  font-weight: 600 !important;
+}
+h5 {
+  font-family: 'Montserrat';
+  font-weight: 600;
   font-size: 1.7em;
-  padding-top:5px !important;
-  margin-top:0px !important;
-  
-  margin:0px !important;
-  margin-left:10px !important;
-  margin-right:10px !important;
-  text-align: center !important;
-  }
-  
-  
-  h6 {
-  /*font-family: 'Montserrat';*/
+  padding-top: 5px;
+  margin: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+h6 {
   font-family: 'Montserrat';
   font-weight: 300;
   font-size: 1.4em;
   margin:14px;
-  text-align: center;
+}
+@media only screen and (min-width: 790px) and (max-width: 1400px)  {
+  h5 {
+    font-size: 1.4em;
   }
-  
-  .hoover-scale-up {
+  h6 {
+    font-size: 1.1em;
+    margin:18px;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 790px)  {
+  h5 {
+    font-size: 1.2em;
+  }
+  h6 {
+    font-size: 0.89em;
+    margin:14px;
+  }
+}
+@media only screen and (min-width: 730px) and (max-width: 761px)  {
+  h5 {
+    font-size: 1.5em;
+  }
+  h6 {
+    font-size: 1.3em;
+    margin:18px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 730px)  {
+  h5 {
+    font-size: 1.5em;
+  }
+  h6 {
+    font-size: 1.3em;
+    margin:18px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  h5 {
+    font-size: 1.2em;
+  }
+  h6 {
+    font-size: 0.94em;
+    margin:15px;
+  }
+}
+footer {
+  background: #1F2436;
+  padding: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  font-size: 1.05em;
+}
+footer a {
+  color: inherit;
+  margin: 5px 0;
+}
+footer a.copyright:before {
+  font-family: "FontAwesome";
+  content: "\f1f9";
+  margin-right: 5px;
+}
+footer a:visited, footer a:hover {
+  color: inherit;
+  text-decoration: none
+}
+footer a span {
+  color: #e31430
+}
+a:hover {
+  color: inherit;
+  text-decoration: none !important;
+}
+@media only screen and (max-width: 759px) {
+  footer{
+    margin-bottom: 20px;
+  }
+}
+/*Additional*/
+.col-centered{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+} 
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100%; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+.row-fluid {
+  width:100%;
+  height:100%;
+  text-align: center;
+  position: absolute;
+  margin:auto;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+}
+.text-left{
+  text-align:left;
+}
+.text-right{
+  text-align:right;
+}
+
+.border-bottom-red {
+  border-bottom: 8px dashed #E74657;
+}
+.border-bottom-red-dark {
+  border-bottom: 8px dashed #8B1E38;
+}
+.border-bottom-blue {
+  border-bottom: 8px dashed #0BA2E4;
+}
+.border-bottom-blue-dark {
+  border-bottom: 8px dashed #0D497F;
+}
+.border-right-blue {
+  border-right: 8px dashed #0BA2E4;
+}
+.border-right-blue-dark {
+  border-right: 8px dashed #0D497F;
+}
+@media only screen and (max-width: 780px) {
+  .border-right-blue {
+    border-right: 0px dashed #0BA2E4;
+  }
+  .border-right-blue-dark {
+    border-right: 0px dashed #0D497F;
+  }
+}
+.background-red-dark {
+  background-color: #8B1E38;
+}
+.background-red {
+  background-color: #E74657;
+}
+.background-blue-dark {
+  background-color: #0D497F;
+}
+.background-blue {
+  background-color: #0BA2E4;
+}
+.border-red {
+  border-color: #E74657 !important;
+}
+.border-red-dark {
+  border-color: #8B1E38 !important;
+}
+.text-red {
+  color: #E74657;
+}
+.text-red-dark {
+  color: #8B1E38 !important;
+}
+.border-blue {
+  border-color: #0BA2E4 !important;
+}
+.border-blue-dark {
+  border-color: #0D497F !important;
+}
+.text-blue {
+  color: #0BA2E4;
+}
+.text-blue-dark {
+  color: #0D497F !important;
+}
+.fa-icon{
+  color:white; 
+  margin-left: 7px;
+}
+.social {
+  width: 30px;
+  height: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.on-hover-scale-up {
   -webkit-transition: 0.3s ease;
   -moz-transition: 0.3s ease;
   -o-transition: 0.3s ease;
-   transition: 0.3s ease;
-  
-  }
-  .hoover-scale-up:hover {
+  transition: 0.3s ease; 
+}
+.on-hover-scale-up:hover {
   -webkit-transform: scale(1.04);
   -moz-transform: scale(1.04);
-    -o-transform: scale(1.04);
-   transform: scale(1.04);
-  }
-  
-  @media only screen and (min-width: 790px) and (max-width: 1400px)  {
-  h5 {
-    /*font-family: 'Montserrat';*/
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 1.4em;
-    margin:18px;
-    text-align: center;
-  }
-  h6 {
-    /*font-family: 'Montserrat';*/
-    font-family: 'Montserrat';
-    font-weight: 300;
-    font-size: 1.1em;
-    margin:18px;
-    text-align: center;
-  }
-  }
-  @media only screen and (min-width: 750px) and (max-width: 790px)  {
-  h5 {
-    /*font-family: 'Montserrat';*/
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 1.2em;
-    margin:18px;
-    text-align: justify;
-  }
-  h6 {
-    /*font-family: 'Montserrat';*/
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 0.89em;
-    margin:14px;
-    text-align: justify;
-  }
-  }
-  @media only screen and (min-width: 730px) and (max-width: 761px)  {
-  h5 {
-    /*font-family: 'Montserrat';*/
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 1.5em;
-    margin:18px;
-    text-align: justify;
-  }
-  h6 {
-    /*font-family: 'Montserrat';*/
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 1.3em;
-    margin:18px;
-    text-align: justify;
-  }
-  }
-  @media only screen and (min-width: 500px) and (max-width: 730px)  {
-  h5 {
-    /*font-family: 'Montserrat';*/
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 1.5em;
-    margin:20px;
-    text-align: justify;
-  }
-  h6 {
-    /*font-family: 'Montserrat';*/
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 1.3em;
-    margin:18px;
-    text-align: justify;
-  }
-  }
-  @media only screen and (max-width: 500px) {
-  h5 {
-    /*font-family: 'Montserrat';*/
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 1.2em;
-    margin:18px;
-    text-align: justify;
-  }
-  h6 {
-    /*font-family: 'Montserrat';*/
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 0.94em;
-    margin:15px;
-    text-align: justify;
-  }
-  }
-  .title {
-  
-  /*border-bottom: 4px dashed white;*/
-  position:relative;
-  width:100%;
-  height: 70px;
-  /*background: #1F2436;*/
-  border-top: 4px dashed transparent;
-  
-  }
-  .more {
-  border-left: 4px dashed white;
-  /*border-bottom: 4px dashed white;*/
-  position:relative;
-  width:50%;
-  height: 60px;
-  float:right;
-  }
-  
-  .hours {
-  border-bottom: 4px dashed white;
-  position:relative;
-  width:50%;
-  height: 60px;
-  float: left;
-  }
-  
-  .coach {
-  border-left: 4px dashed white;
-  border-bottom: 4px dashed white;
-  position:relative;
-  width:50%;
-  height: 60px;
-  float: right;
-  }
-  
-  .hoursR {
-  
-    position:relative;
-    width:50%;
-    height: 60px;
-    float: left;
-    }
-    
-    .coachR {
-    border-left: 4px dashed white;
-  
-    position:relative;
-    width:50%;
-    height: 60px;
-    float: right;
-    }
-  
-  .separator {
-  border-bottom: 4px dashed white;
-  position:relative;
-  width:100%;
-  height: 1px;
-  }
-  
-  
-  
-  .left {
-  background-color: #E74657;
-  height: 100%;
-  }
-  .right {
-  background-color: #0BA2E4;
-  height: 100%;
-  }
-  .nopadding {
+  -o-transform: scale(1.04);
+  transform: scale(1.04);
+} 
+.top-buffer-1 {
+  padding-top: 40px;
+}
+.top-buffer-2 {
+  padding-top: 10px;
+}
+.top-buffer-3 {
+  padding-top: 20px;
+}
+.bottom-buffer-1 {
+  padding-bottom: 35px;
+}
+.bottom-buffer-2 {
+  padding-bottom: 20px;
+}
+.nopadding {
   padding: 0 !important;
   margin: 0 !important;
+}
+.padding-left {
+  padding-left: 40px;
+}
+.padding-right {
+  padding-right: 40px;
+}
+.padding-horizontal {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.padding-vertical {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+@media only screen and (max-width: 759px) {
+  .padding-horizontal {
+    padding-left: 15px;
+    padding-right: 15px;
   }
-  .page-header {
-  margin-top: 68px !important;
-  border-bottom: 0px !important;
+  .padding-vertical-mob {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
-  .headerBackground {
-  width: 100%;
-  height:100%;
-  }
-  
-  .headerBackgroundWrapper {
-  position:relative;
-  }
-  .logoAnimWrapper {
-  position: relative;
-  }
-  
-  .logoAnim {
-  width: 46%;
-  margin: auto;  
-  position: absolute;
-  left:0;
-  right: 20px;
-  top: 0;
-  bottom: 0;
+}
+.left-div {
+  width:50%;
+  display: inline-block;
+  max-width: 300px;
+  text-align: left;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 10px;
+  vertical-align: top;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+}
+.left-div:hover {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  transform: scale(1.04);
+}
+.right-div {
+  width:50%;
+  display: inline-block;
+  max-width: 150px;
+  text-align: left;
+  padding: 10px; 
+  border-radius: 3px;
+  margin: 10px;
   -webkit-transition: 1s ease;
   -moz-transition: 1s ease;
   -o-transition: 1s ease;
    transition: 1s ease;
-  }
-  .logoAnim:hover {
+}
+.right-div:hover {
   -webkit-transform: scale(1.04);
   -moz-transform: scale(1.04);
-    -o-transform: scale(1.04);
-   transform: scale(1.04);
+  -o-transform: scale(1.04);
+  transform: scale(1.04);
+}
+@media only screen and (max-width: 759px) {
+  .left-div {
+    padding: 20px;
+    margin: auto;
   }
-  
-  .nav {
+  .right-div {
+    margin: 15px;
+  }
+}
+.left {
+  background-color: #E74657;
+  height: 100%;
+}
+.right {
+  background-color: #0BA2E4;
+  height: 100%;
+}
+/*Navigation*/
+.nav {
   border: none;
   height: 68px;
   line-height: 68px;
@@ -282,31 +384,97 @@ body, html {
   background-color: #1F2436;
   display: inline-block;
   z-index: 100;
-  }
-  
-  ul, li {
-  margin: 0 !important;
-  padding: 0 !important;
-  /*font-family: 'League Spartan';*/
-  letter-spacing: 1px;
-  font-size: 16px;
-  }
-  
-  
-  #toggle-nav {
-  display: none;
-  }
-  
-  label[for^="toggle-nav"] {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+}
+label[for^="toggle-nav"] {
   display: none;
   z-index: 9999;
   cursor: pointer;
-  }
-  .nav [data-icon]:before {
+  position: absolute;
+  top: 0px;
+  right: 6px;
+}
+.nav [data-icon]:before {
   content: attr(data-icon);
+}
+#toggle-nav {
+  display: none;
+}
+.brand {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  color: white;
+}
+.nav .menu {
+  background: #1F2436;
+  float:right;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.menu > li {
+  float:left;
+  list-style: none;
+}
+.menu > li > a {
+  margin: 0px 3px;
+  padding: 0px 5px;
+  display: block;
+}
+.nav-signup {
+  background-color: #E74657;
+  display: inline-block;
+}
+.navLogo {
+  margin: 13px 8px;
+  padding: 0px 0px;
+  float: left;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.navLogo:hover {
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+    -o-transform: scale(1.01);
+  transform: scale(1.01);
+} 
+.menu > li > a:hover {
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+.nav [data-icon]:before {
+  color: white;
+  font-size: 20px;
+  padding: 10px 12px;
+}
+.nav [data-icon]:hover:before {
+  background: rgba(0, 0, 0, 0.05);
+}
+@media only screen and (max-width: 1000px) {
+  .nav {
+    padding-left: 23px;
+    padding-right: 23px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
   }
-  
-  @media only screen and (max-width: 759px) {
+  .navLogo {
+    margin: 19px 18px;
+    padding: 0px 0px;
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .navLogo{
+    width: 30%;
+  } 
+} 
+@media only screen and (max-width: 759px) {
   nav.nav {
     height: 68px;
     padding-left: 13px;
@@ -316,7 +484,6 @@ body, html {
     width: 100%;
     background-color: #1F2436;
   }
-  
   label[for^="toggle-nav"] {
     display: block;
   }
@@ -325,7 +492,6 @@ body, html {
     display: block;
   }
   .menu {
-  
     position: absolute;
     opacity: 0;
     display: none;
@@ -338,460 +504,119 @@ body, html {
     width: 100%;
     border-top: 1px solid #ffffff;
   }
-  a {
-    margin: -1px !important;
-    padding: 0px;
-    width:101%;
-    text-decoration: none;
+}
+@media only screen and (min-width: 1350px) {
+  .nav {
+    padding-left: 63px;
+    padding-right: 63px;
   }
+  .navLogo{
+    width:13%;
   }
-  
-  a {
-  color: #ffffff;
-  text-decoration: none;
-  }
-  
-  label[for^="toggle-nav"] {
-  position: absolute;
-  top: 0px;
-  right: 6px;
-  }
-  
-  .brand {
-  font-size: 18px;
-  letter-spacing: 1px;
-  margin-left: 10px;
-  color: white;
-  }
-  
-  .nav .menu {
-  background: #1F2436;
-  float:right;
-  margin: 0;
-  margin-bottom: 20px;
-  }
-  .menu > li {
-  float:left;
-  list-style: none;
-  }
-  .menu > li > a {
-  margin: 0px 3px;
-  padding: 0px 5px;
-  display: block;
-  }
-  .special {
-  background-color: #E74657;
-  display: inline-block;
-  }
-  .navLogo {
-  margin: 13px 8px;
-  padding: 0px 0px;
-  float: left;
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-   transition: 0.3s ease;
-  }
-  .navLogo:hover {
-  -webkit-transform: scale(1.01);
-  -moz-transform: scale(1.01);
-    -o-transform: scale(1.01);
-   transform: scale(1.01);
-  }
-  .menu > li > a:hover {
-  /*background: rgba(255, 0, 0, 0.6);*/
-  /*color: white;*/
-  font-weight: 500;
-  color: white;
-  text-decoration: none;
-  }
-  .nav [data-icon]:before {
-  color: rgba(0, 0, 0, .7);
-  font-size: 20px;
-  /*border: 2px solid rgba(0, 0, 0, .7);*/
-  padding: 10px 12px;
-  color: white;
-  /*border-radius: 25px;*/
-  }
-  .nav [data-icon]:hover:before {
-  background: rgba(0, 0, 0, 0.05);
-  }
-  
-  
-  
-  @media only screen and (max-width: 1000px) {
-  .navLogo {
-    margin: 19px 18px;
-    padding: 0px 0px;
-    width: 20%;
-  }
-  ul, li {
-    letter-spacing: 0px;
-    font-size: 14px;
-  }
+}
+@media only screen and (max-width: 1350px) {
   .nav {
     padding-left: 23px;
     padding-right: 23px;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%;
   }
+  .navLogo{
+    margin: 15px 16px;
+    width:19%;
   }
-  
-  .info{
-    height: auto;
-    background-color: white;
-    border-style: dashed;
-    border-width: 10px;
-    border-color: #1F2436;
-    padding: 20px;
-    font-size: 1.3em;
-    text-align: justify;
-    line-height: 28px;
+}
+@media only screen and (min-width: 759px) and (max-width: 859px) {
+  .navLogo{
+    margin: 22px 16px;
+    width:19%;
   }
-  
-  .info-add{
-    height: auto;
-    background-color: #1F2436;
-    border-style: dashed;
-    border-bottom: 0px;
-    border-width: 10px;
-    border-color: #1F2436;
-    padding: 20px;
-    font-size: 1.3em;
-    text-align: justify;
-    line-height: 28px;
-    color: white;
+}
+@media only screen and (min-width: 1350px) and (max-width: 1450px)  {
+  .navLogo{
+    margin: 16px 16px;
+    width:17%;
   }
-  
-  
-  .padding-left {
-    padding-left: 40px;
+}
+@media only screen and (min-width: 759px) and (max-width: 859px) {
+  .navLogo{
+    margin:32px, 0px;
+    width: 19%;
+  } 
+}
+@media only screen and (min-width: 600px) and (max-width: 715px) {
+  .navLogo{
+    margin: 18px 16px;
+    width: 28%;
+  } 
+}
+@media only screen and (max-width: 759px) and (orientation:landscape) {
+  .navLogo{
+    padding-left:8px;
+    width: 22%;
   }
-  
-  .padding-right {
-    padding-right: 40px;
+}
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+  .navLogo{
+    padding-left:8px;
+    width:42%;
   }
-  
-  .padding-horizontal {
-    padding-left: 40px;
-    padding-right: 40px;
+}
+@media only screen and (max-width: 500px) and (orientation:portrait) {
+  .navLogo{
+    padding-left:8px;
+    width:42%;
   }
-  
-  .padding-vertical {
-    padding-top: 15px;
-    padding-bottom: 15px;
+}
+@media only screen and (max-width: 420px) and (orientation:portrait) {
+  .navLogo{
+    padding-left:8px;
+    width:57%;
   }
-  
-  .left-div
-  {
-    width:50%;
-    display: inline-block;
-    max-width: 300px;
-    text-align: left;
-    padding: 10px;
-  
-    border-radius: 3px;
-    margin: 10px;
-    vertical-align: top;
-    -webkit-transition: 1s ease;
-    -moz-transition: 1s ease;
-    -o-transition: 1s ease;
-     transition: 1s ease;
-    }
-    .left-div:hover {
-    -webkit-transform: scale(1.04);
-    -moz-transform: scale(1.04);
-      -o-transform: scale(1.04);
-     transform: scale(1.04);
-    }
-  .right-div
-  {
-    width:50%;
-    display: inline-block;
-    max-width: 150px;
-    text-align: left;
-    padding: 10px; 
-  
-    border-radius: 3px;
-    margin: 10px;
-    -webkit-transition: 1s ease;
-    -moz-transition: 1s ease;
-    -o-transition: 1s ease;
-     transition: 1s ease;
-    }
-    .right-div:hover {
-    -webkit-transform: scale(1.04);
-    -moz-transform: scale(1.04);
-      -o-transform: scale(1.04);
-     transform: scale(1.04);
-    }
-  
-  @media only screen and (max-width: 759px) {
-    .left-div
-    {
-      width:50%;
-      display: inline-block;
-      max-width: 300px;
-      text-align: left;
-      padding: 20px;
-      
-      border-radius: 3px;
-      margin: auto;
-      vertical-align: top;
-    }
-    .right-div
-    {
-      width:50%;
-      display: inline-block;
-      max-width: 150px;
-      text-align: left;
-   
-    
-      border-radius: 3px;
-      margin: 15px;
-    }
-    
-  }
-  
-  @media only screen and (max-width: 759px) {
-  
-    .info{
-      font-size: 1.2em;
-      text-align: justify;
-      line-height: 28px;
-    }
-  
-    .info-add{
-      padding-top: 0px;
-      font-size: 1.2em;
-      text-align: justify;
-      line-height: 28px;
-    }
-  
-    .padding-vertical-mob {
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
-    
-      .padding-horizontal {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-    }
-  
-  
-  .col-centered{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  }
-  
-  .evenea {
-  background-color: #1F2436;
-  width: 0px;
-  height: 0px;
-  opacity: 0;
-  display: none;
-  }
-  #evenea-btn{
-    font-family: 'Montserrat';
-  padding: 18px 30px 18px 35px;
-  background-color: #E74657;
-  border: 2px solid white;
-  font-size: 1.2em;
-  color: white;
+}
+/*Head*/
+.page-header {
+  margin-top: 68px !important;
+  border-bottom: 0px !important;
+}
+.headerBackground {
+  width: 100%;
+  height:100%;
+}
+.headerBackgroundWrapper {
+  position:relative;
+}
+.logoAnimWrapper {
   position: relative;
-  margin: auto;
+}
+.logoAnim {
+  width: 46%;
+  margin: auto;  
+  position: absolute;
+  left:0;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+}
+.logoAnim:hover {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+    -o-transform: scale(1.04);
+  transform: scale(1.04);
+}
+@media only screen and (max-width: 1350px) {
+  .logoAnim {
+    width: 85%;
   }
-  #evenea-btn:hover{
-  /*top:-2px;*/
-  text-decoration:none;
-  font-weight: 600;
-  border: 4px solid white;
+}
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+  .logoAnim {
+    width: 75%;
   }
-  #evenea-txt{
-      font-family: 'Montserrat';
-    font-weight: 600;
-  color: white;
-  font-size: 1.3em;
-  }
-  #evenea-r{
-  
-  padding-top: 10px;
-  }
-  
-  
-  
-  @media only screen and (max-width: 759px) {
-  
-  .evenea{
-      height: 150px;
-      width: 100%;
-      /*padding-top: 30px;*/
-      padding: 20px 30px 80px 30px;
-      opacity: 1;
-      display: block;
-  
-  }
-  #evenea-r{
-      padding-top: 20px;
-      
-  }
-  #evenea-txt{
-      font-size: 1.4em;
-  }
-  
-  }
-  
-  .scheduleWorkshopBlueS {
-  color: white;
-  background-color: #0BA2E4;
-  
-  border-bottom: 8px dashed #0D497F;
-  
-  
-  position:relative;
-  width:100%;
-  height: 200px;
-  }
-  
-  .scheduleWorkshopRedS {
-  color: white;
-  background-color: #0D497F;
-  
-  border-bottom: 8px dashed #0BA2E4;
-  
-  
-  position:relative;
-  width:100%;
-  height: 200px;
-  }
-  
-  .scheduleWorkshopBlue {
-  color: white;
-  background-color: #8B1E38;
-  
-  border-bottom: 8px dashed #E74657;
-  
-  border-right: 8px dashed #0D497F;
-  position:relative;
-  width:100%;
-  height: 200px;
-  }
-  
-  .scheduleWorkshopRed {
-  color: white;
-  background-color: #E74657;
-  
-  border-bottom: 8px dashed #8B1E38;
-  
-  border-right: 8px dashed #0BA2E4;
-  position:relative;
-  width:100%;
-  height: 200px;
-  }
-  
-  .scheduleSubHeadBlueS {
-  color: white;
-  background-color: #0BA2E4;
-  
-  border-bottom: 8px dashed #0D497F;
-  
-  
-  position:relative;
-  width:100%;
-  height: 55px;
-  }
-  
-  .scheduleSubHeadRedS {
-  color: white;
-  background-color: #0D497F;
-  
-  border-bottom: 8px dashed #0BA2E4;
-  
-  
-  position:relative;
-  width:100%;
-  height: 55px;
-  }
-  
-  
-  .scheduleSubHeadBlueSF {
-    color: white;
-    background-color: #0BA2E4;
-    
-    border-bottom: 8px dashed #0D497F;
-    
-    
-    position:relative;
-    width:100%;
-    height: 120px;
-    }
-    
-    .scheduleSubHeadRedSF {
-    color: white;
-    background-color: #0D497F;
-    
-    border-bottom: 8px dashed #0BA2E4;
-    
-    
-    position:relative;
-    width:100%;
-    height: 120px;
-    }
-  
-  
-  .scheduleSubHeadBlue {
-  color: white;
-  background-color: #8B1E38;
-  
-  border-bottom: 8px dashed #E74657;
-  border-right: 8px dashed #0D497F;
-  
-  position:relative;
-  width:100%;
-  height: 55px;
-  }
-  
-  .scheduleSubHeadRedF {
-  color: white;
-  background-color: #E74657;
-  
-  border-bottom: 8px dashed #8B1E38;
-  border-right: 8px dashed #0BA2E4;
-  
-  position:relative;
-  width:100%;
-  height: 115px;
-  }
-  
-  .scheduleSubHeadBlueF {
-    color: white;
-    background-color: #8B1E38;
-    
-    border-bottom: 8px dashed #E74657;
-    border-right: 8px dashed #0D497F;
-    
-    position:relative;
-    width:100%;
-    height: 115px;
-    }
-    
-    .scheduleSubHeadRed {
-    color: white;
-    background-color: #E74657;
-    
-    border-bottom: 8px dashed #8B1E38;
-    border-right: 8px dashed #0BA2E4;
-    
-    position:relative;
-    width:100%;
-    height: 55px;
-    }
-  
-  .head {
+}
+.head {
   color: #1F2436;
   background-color: white;
   border-style: dashed;
@@ -800,499 +625,314 @@ body, html {
   position:relative;
   width:100%;
   height: 90px;
+}
+@media only screen and (max-width: 759px) {
+  .head {
+    border-left: 0px;
+    border-right: 0px;
   }
-  
-  
-  
-  .row-fluid {
-  width:100%;
-  height:100%;
-  
-  text-align: center;
-  position: absolute;
-  margin:auto;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-  
+}
+@media only screen and (max-width: 780px) {
+  .page-header{
+    height: 50vh; 
+    display: inline-block;
   }
-  
-  .vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100%; /* These two lines are counted as one :-)       */
-  
-  display: flex;
-  align-items: center;
+  .headerBackground {
+    height: 640px; 
+    object-fit: cover;
   }
-  
-  @media only screen and (max-width: 780px) {
-  .navLogo{
-    width: 30%;
-  } 
-  .info{
+  .headerBackgroundWrapper {
+    overflow: hidden;
+    height: 100%;
+  }
+  .row [class*="col-"]  {
+    margin-bottom:-20px;
+  }
+  .row:last-child [class*="col-"]:last-child{
+    margin-bottom:-20px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .headerBackground {
+    height: 50vh; 
+    object-fit: cover;
+    width: 100%;
+  }
+  .row [class*="col-"]  {
+    margin-bottom:-20px;
+  }
+  .row:last-child [class*="col-"]:last-child{
+    margin-bottom:-20px;
+  }
+}
+/*Evenea*/
+.evenea {
+  background-color: #1F2436;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  display: none;
+}
+#evenea-btn{
+  font-family: 'Montserrat';
+  padding: 18px 30px 18px 35px;
+  background-color: #E74657;
+  border: 2px solid white;
+  font-size: 1.2em;
+  color: white;
+  position: relative;
+  margin: auto;
+}
+#evenea-btn:hover{
+  text-decoration:none;
+  font-weight: 600;
+  border: 4px solid white;
+}
+#evenea-txt{
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: white;
+  font-size: 1.3em;
+}
+#evenea-r{
+  padding-top: 10px;
+}
+@media only screen and (max-width: 759px) {
+  .evenea{
+    height: 150px;
+    width: 100%;
+    padding: 20px 30px 80px 30px;
+    opacity: 1;
+    display: block;
+  }
+  #evenea-r{
+    padding-top: 20px;
+      
+  }
+  #evenea-txt{
+    font-size: 1.4em;
+  }
+}
+/*Info*/
+.information-main {
+  height: auto;
+  background-color: white;
+  border-style: dashed;
+  border-width: 10px;
+  border-color: #1F2436;
+  padding: 20px;
+  font-size: 1.3em;
+  text-align: justify;
+  line-height: 28px;
+}
+.information-additional {
+  height: auto;
+  background-color: #1F2436;
+  border-style: dashed;
+  border-bottom: 0px;
+  border-width: 10px;
+  border-color: #1F2436;
+  padding: 20px;
+  font-size: 1.3em;
+  text-align: justify;
+  line-height: 28px;
+  color: white;
+}
+@media only screen and (max-width: 780px) {
+  .information-main{
     border-top: 10px dashed #1F2436;
     border-bottom: 10px dashed #1F2436;
     border-left: 0px dashed #1F2436;
     border-right: 0px dashed #1F2436;
   }
-  
-  
-  .scheduleSubHeadBlueSF {
-    color: white;
-    background-color: #0BA2E4;
-    
-    border-bottom: 8px dashed #0D497F;
-    
-    
-    position:relative;
-    width:100%;
-    height: 120px;
-    }
-    .scheduleSubHeadBlueF {
-      color: white;
-      background-color: #8B1E38;
-      
-      border-bottom: 8px dashed #E74657;
-      border-right: 0px dashed #0D497F;
-      
-      position:relative;
-      width:100%;
-      height: 115px;
-      }
-  
-      .scheduleSubHeadRedF {
-        color: white;
-        background-color: #E74657;
-        
-        border-bottom: 8px dashed #8B1E38;
-        border-right: 0px dashed #0BA2E4;
-        
-        position:relative;
-        width:100%;
-        height: 115px;
-        }
-  
-  .scheduleWorkshopBlue {
-  color: white;
-  
-  
-  border-bottom: 8px dashed #E74657;
-  
-  border-right: 0px dashed #E74657;
-  position:relative;
-  width:100%;
-  height: 200px;
-  }
-  
-  .scheduleWorkshopRed {
-  color: white;
-  
-  
-  border-bottom: 8px dashed #8B1E38;
-  
-  border-right: 0px dashed #0BA2E4;
-  position:relative;
-  width:100%;
-  height: 200px;
-  }
-  
-  .scheduleSubHeadBlue {
-  color: white;
-  
-  
-  border-bottom: 8px dashed #E74657;
-  border-right: 0px dashed #E74657;
-  
-  position:relative;
-  width:100%;
-  height: 55px;
-  }
-  
-  .scheduleSubHeadRed {
-  color: white;
-  
-  
-  border-bottom: 8px dashed #8B1E38;
-  border-right: 0px dashed #0BA2E4;
-  
-  position:relative;
-  width:100%;
-  height: 55px;
-  }
-  
-  .headerBackgroundWrapper {
-    overflow: hidden;
-    height: 100%;
-  }
-  
-  .page-header{
-    height: 50vh; 
-    display: inline-block;
-  }
-  
-  .headerBackground {
-    height: 640px; 
-    object-fit: cover;
-  }
-  /*.row { margin:-17px; }*/
-  .row [class*="col-"]  {
-    margin-bottom:-20px;
-  }
-  .row:last-child [class*="col-"]:last-child{
-    margin-bottom:-20px;
-  }
-  }
-  
-  
-  @media only screen and (max-width: 480px) {
-  .headerBackground {
-    height: 50vh; 
-    object-fit: cover;
-    width: 100%;
-  }
-  /*.row { margin:-17px; }*/
-  .row [class*="col-"]  {
-    margin-bottom:-20px;
-  }
-  .row:last-child [class*="col-"]:last-child{
-    margin-bottom:-20px;
-  }
-  }
-  
-  .nav {
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%;
-  }
-  
-  @media only screen and (min-width: 1350px) {
-  .nav {
-    padding-left: 63px;
-    padding-right: 63px;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%;
-  }
-  .navLogo{
-    width:13%;
-  }
-  }
-  
-  
-  @media only screen and (max-width: 1350px) {
-  .nav {
-    padding-left: 23px;
-    padding-right: 23px;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%;
-  }
-  .navLogo{
-    margin: 15px 16px;
-    width:19%;
-  }
-  .logoAnim {
-    width: 85%;
-    height: auto;
-    margin: auto;  
-    position: absolute;
-    left:0;
-    right: 20px;
-    top: 0;
-    bottom: 0;
-  }
-  }
-  
-  
-  @media only screen and (min-width: 759px) and (max-width: 859px) {
-  .navLogo{
-    margin: 22px 16px;
-    width:19%;
-  }
-  }
-  @media only screen and (min-width: 1350px) and (max-width: 1450px)  {
-  .navLogo{
-    margin: 16px 16px;
-    width:17%;
-  }
-  }
-  
-  @media only screen and (min-width: 759px) and (max-width: 859px) {
-  .navLogo{
-    margin:32px, 0px;
-    width: 19%;
-  } 
-  
-  }
-  
-  @media only screen and (min-width: 600px) and (max-width: 715px) {
-  .navLogo{
-    margin: 18px 16px;
-    width: 28%;
-  } 
-  }
-  
-  @media only screen and (max-width: 759px) and (orientation:landscape) {
-  .navLogo{
-    padding-left:8px;
-    width: 22%;
-  }
-  
-  }
-  @media only screen and (min-width: 500px) and (max-width: 600px) {
-  .navLogo{
-    padding-left:8px;
-    width:42%;
-  }
-  .logoAnim {
-    width: 75%;
-    margin: auto;  
-    position: absolute;
-    left:0;
-    right: 20px;
-    top: 0;
-    bottom: 0;
-  }
-  }
-  @media only screen and (max-width: 500px) and (orientation:portrait) {
-  .navLogo{
-    padding-left:8px;
-    width:42%;
-  }
-  }
-  
-  @media only screen and (max-width: 420px) and (orientation:portrait) {
-    .navLogo{
-      padding-left:8px;
-      width:57%;
-    }
-  }
-  agm-map {
-  
-    height: 370px;
-    /* width: auto;
-    max-width: 200px; */
-  
-  }
-  
-  .place {
-    height: 370px;
-    color: white; 
+}
+@media only screen and (max-width: 759px) {
+  .information-main {
     font-size: 1.2em;
-    text-align: left;
-  
-    padding-top: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    line-height: 30px;
-  }
-  
-  .patrons {
-    height: auto;
-    background-color:white;
-    border-style: dashed;
-    border-bottom: 0px;
-    border-width: 10px;
-    border-color: #1F2436;
-    padding: 0px;
-    font-size: 1.3em;
-  
+    text-align: justify;
     line-height: 28px;
-    color: #1F2436;
-    border-top: 0px;
-    border-bottom: 0px;
-    text-align: center;
   }
-  
-  
-  @media only screen and (max-width: 759px) {
-    .place{
-      font-size: 1em;
-      height: 320px;
-    }
-    agm-map {
-        
-          height: 320px;
-          /* width: auto;
-          max-width: 200px; */
-        
-        }
-    .patrons {
-      border-left: 0px;
-      border-right: 0px;
-    }
+  .information-additional {
+    padding-top: 0px;
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 28px;
   }
-
-  @media only screen and (max-width: 500px) {
-    .place{
-      font-size: 1em;
-      height: 400px;
-    }
-    agm-map {
-        
-          height: 400px;
-          /* width: auto;
-          max-width: 200px; */
-        
-        }
+}
+/*Schedule*/
+.schedule-workshop-content {
+  position:relative;
+  width:100%;
+  height: 200px;
+  color: white;
+}
+.schedule-workshop-head {
+  position:relative;
+  width:100%;
+  height: 55px;
+  color: white;
+}
+.schedule-registration-head {
+  position:relative;
+  width:100%;
+  height: 115px;
+  color: white;
+}
+.schedule-title {
+  position:relative;
+  width:100%;
+  height: 70px;
+  border-top: 4px dashed transparent;
+}
+.schedule-more {
+  border-left: 4px dashed white;
+  position:relative;
+  width:50%;
+  height: 60px;
+  float:right;
+}
+.schedule-coach {
+  border-left: 4px dashed white;
+  border-bottom: 4px dashed white;
+  position:relative;
+  width:50%;
+  height: 60px;
+  float: right;
+}
+.schedule-hours {
+  border-bottom: 4px dashed white;
+  position:relative;
+  width:50%;
+  height: 60px;
+  float: left;
+}
+.schedule-registration-hours {
+  position:relative;
+  width:50%;
+  height: 60px;
+  float: left;
+}
+.schedule-registration-info {
+  border-left: 4px dashed white;
+  position:relative;
+  width:50%;
+  height: 60px;
+  float: right;
+}
+.schedule-separator {
+  border-bottom: 4px dashed white;
+  position:relative;
+  width:100%;
+  height: 1px;
+}
+/*Patrons*/
+.patrons {
+  height: auto;
+  background-color:white;
+  border-style: dashed;
+  border-bottom: 0px;
+  border-width: 10px;
+  border-color: #1F2436;
+  padding: 0px;
+  font-size: 1.3em;
+  line-height: 28px;
+  color: #1F2436;
+  border-top: 0px;
+  border-bottom: 0px;
+  text-align: center;
+}
+@media only screen and (max-width: 759px) {
+  .patrons {
+    border-left: 0px;
+    border-right: 0px;
   }
-  
-  .patron {
-    -webkit-transition: 1s ease;
-    -moz-transition: 1s ease;
-    -o-transition: 1s ease;
-     transition: 1s ease;
-    }
-   .patron:hover {
-    -webkit-transform: scale(1.04);
-    -moz-transform: scale(1.04);
-      -o-transform: scale(1.04);
-     transform: scale(1.04);
-    }
-  
-  .side-by-side
-  {
-    float:left;
-    padding:0px 20px;
+}
+.patron {
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+}
+.patron:hover {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  transform: scale(1.04);
+}
+/*Place*/
+.place {
+  height: 370px;
+  color: white; 
+  font-size: 1.2em;
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 30px;
+}
+@media only screen and (max-width: 759px) { 
+  .place{
+    font-size: 1em;
+    height: 320px;
   }
-  .modal-content{
+}
+@media only screen and (max-width: 500px) {
+  .place{
+    font-size: 1em;
+    height: 400px;
+  }
+}
+/*Modal*/
+.modal-content{
   font-size: 1.2em !important;
   border: 8px solid #E74657 !important;
   text-align: justify !important;
-  }
-  
-  #modal-label {
-   height:auto;
-   background-color:  #E74657;
-   font: "Montserrat";
-   font-weight: 400;
-   color: white;
-   font-size: 1.4em !important;
-   /*display: none !important;*/
-   padding:15px !important;
-  }
-  
-  .modal-inner {
-  /*border-radius: 0px !important;*/
-  
+}
+
+#modal-label {
+  height:auto;
+  background-color:  #E74657;
+  font: "Montserrat";
+  font-weight: 400;
+  color: white;
+  font-size: 1.4em !important;
+  padding:15px !important;
+}
+.modal-inner {
   background: transparent !important;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3) !important;
-  
   max-width: 100%;
-  
   transition: max-width 0.25s linear,
               margin-left 0.125s linear;
-  }
-  
-  .modal-close::before {
+}
+.modal-close::before {
   background: transparent !important;
   box-shadow: none !important;
   background-color: transparent !important;
   color: #1F2436 !important;
-  }
-  
-  .modal-close::after {
-    color: #1F2436 !important;
-    }
-  
-  .modal-footer {
+}
+.modal-close::after {
+  color: #1F2436 !important;
+}
+.modal-footer {
   border-top: 0px solid !important;
   background: #0BA2E4 !important;
   border-radius: 0px;
   display: none !important;
+}
+@media only screen and (max-width: 759px) {
+  .modal-content{
+    font-size: 0.9em !important;
+    border: 8px solid #E74657 !important;
+    text-align: justify !important;
   }
-  
-  .notActive{
-  opacity:30%;
+  #modal-label {
+    height:auto;
+    background-color:  #E74657;
+    font: "Montserrat";
+    font-weight: 400;
+    color: white;
+    font-size: 1em !important;
+    padding:15px !important;
   }
-  
-  @media only screen and (max-width: 759px) {
-    .head {
-      border-left: 0px;
-      border-right: 0px;
-  
-      }
-  
-    .modal-content{
-      font-size: 0.9em !important;
-      border: 8px solid #E74657 !important;
-      text-align: justify !important;
-      }
-      
-      #modal-label {
-       height:auto;
-       background-color:  #E74657;
-       font: "Montserrat";
-       font-weight: 400;
-       color: white;
-       font-size: 1em !important;
-       /*display: none !important;*/
-       padding:15px !important;
-      }
-  }
-    
-  .top-buffer {
-    padding-top: 40px;
-  }
-  
-  .top-buffer-2 {
-    padding-top: 10px;
-  }
-  
-  .top-buffer-3 {
-    padding-top: 20px;
-  }
-  
-  .bottom-buffer {
-    padding-bottom: 35px;
-  }
-  
-  footer {
-    background: #1F2436;
-    padding: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #fff;
-    font-size: 1.05em;
-  }
-  
-  footer a {
-    color: inherit;
-    margin: 5px 0;
-  }
-  
-  
-  
-  .social {
-    width: 30px;
-    height: 30px;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  
-  footer a.copyright:before {
-    font-family: "FontAwesome";
-    content: "\f1f9";
-    margin-right: 5px;
-  }
-  
-  footer a:visited, footer a:hover {
-    color: inherit;
-    text-decoration: none
-  }
-  
-  footer a span {
-    color: #e31430
-  }
-  
-  a:hover {
-    color: inherit;
-    text-decoration: none !important;
-  }
-  
-  @media only screen and (max-width: 759px) {
-    footer{
-      margin-bottom: 20px;
-    }
-  }
+}
