@@ -900,6 +900,7 @@ label[for^="toggle-nav"] {
   color: white;
   font-size: 1.4em !important;
   padding:15px !important;
+  text-align: left !important;
 }
 .modal-inner {
   background: transparent !important;

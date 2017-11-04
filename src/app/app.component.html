@@ -102,7 +102,7 @@
               <div class="bottom-buffer-2">
                 <div *ngFor="let textBreaked of scheduleItem.description.split('<br>')"><p>{{textBreaked}}<br/></p></div>
               </div>       
-              <div id="evenea-r" class="col-lg-12 col-centered bottom-buffer-2">         
+              <div id="evenea-r" class="col-lg-12 col-centered bottom-buffer-1">         
                 <a id="evenea-btn" href="https://lwd2017.evenea.pl">ZAPISZ SIĘ<span class="fa fa-pencil fa-icon"></span></a>       
               </div>
             </div>
@@ -142,11 +142,11 @@
                   {{coach.name}}
                 </header>
                 <div class="modal-content">
-                  <div class="col-sm-3">
+                  <div class="col-sm-3 bottom-buffer-1">
                     <img src="{{coach.srcImg}}" type="image/svg+xml" class="img-responsive"/> 
                   </div>
                   <br>
-                  <div class="col-sm-9">
+                  <div class="col-sm-9 bottom-buffer-1">
                     {{coach.desc}}
                   </div>
                 </div>
