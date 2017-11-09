@@ -6,7 +6,7 @@ Here you can check out the live version:
 Screenshots
 ========
 <div>
-<img src="https://i.imgur.com/qc6ZHKK.png" alt="app-preview" width="470" height="317">
+<img src="https://i.imgur.com/qc6ZHKK.png" alt="app-preview" width="70%" height="70%">
 </div>
 
 Deployment
@@ -15,7 +15,7 @@ Install modules
 ----
 	$ npm i
 ----
-Than run application
+Run application
 ----
 	$ ng serve
 
