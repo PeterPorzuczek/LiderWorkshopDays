@@ -794,6 +794,12 @@ label[for^="toggle-nav"] {
   height: 60px;
   float:right;
 }
+.schedule-materials {
+  position:relative;
+  width:50%;
+  height: 60px;
+  float:left;
+}
 .schedule-coach {
   border-left: 4px dashed white;
   border-bottom: 4px dashed white;
