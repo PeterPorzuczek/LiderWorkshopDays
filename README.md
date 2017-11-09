@@ -1,27 +1,30 @@
-# MyApp
+# Lider workshop days event site
+Site built for Lider Workshop Days Event.
+Here you can check out the live version:
+[LWD2017](https://peterporzuczek.github.io/LiderWorkshopDays/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
+Screenshots
+========
+<div>
+<img src="https://i.imgur.com/qc6ZHKK.png" alt="app-preview" width="470" height="317">
+</div>
 
-## Development server
+Deployment
+========
+Install modules
+----
+	$ npm i
+----
+Than run application
+----
+	$ ng serve
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Built With
+========
+* [Angular-4](https://angular.io) - Angular 4 used.
+* [Bodymovin](https://github.com/bodymovin/bodymovin) - Bodymovin for header animation.
+* [Angular Google maps](https://github.com/SebastianM/angular-google-maps) - Google maps.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+License
+========
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
