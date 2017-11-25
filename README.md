@@ -6,7 +6,7 @@ Here you can check out the live version:
 Screenshots
 ========
 <div>
-<img src="https://i.imgur.com/qc6ZHKK.png" alt="app-preview" width="70%" height="70%">
+<img src="https://i.imgur.com/qc6ZHKK.png" alt="app-preview" width="70%">
 </div>
 
 Deployment
